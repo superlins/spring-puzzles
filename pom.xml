@@ -6,7 +6,18 @@
 
     <groupId>org.example</groupId>
     <artifactId>spring-puzzles</artifactId>
+    <packaging>pom</packaging>
     <version>1.0.0</version>
+
+    <modules>
+        <module>spring-jdbc</module>
+        <module>spring-data-jdbc</module>
+        <module>spring-mybatis</module>
+        <module>spring-data-r2dbc</module>
+        <module>spring-testcontainers</module>
+        <module>spring-keyclock</module>
+        <module>spring-security</module>
+    </modules>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
