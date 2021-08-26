@@ -17,6 +17,8 @@
         <module>spring-testcontainers</module>
         <module>spring-keyclock</module>
         <module>spring-security</module>
+        <module>spring-es</module>
+        <module>spring-quartz</module>
     </modules>
 
     <properties>

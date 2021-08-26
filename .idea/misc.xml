@@ -5,16 +5,17 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/spring-security/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/spring-data-jdbc/pom.xml" />
         <option value="$PROJECT_DIR$/spring-data-r2dbc/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-es/pom.xml" />
         <option value="$PROJECT_DIR$/spring-jdbc/pom.xml" />
         <option value="$PROJECT_DIR$/spring-keyclock/pom.xml" />
         <option value="$PROJECT_DIR$/spring-mybatis/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-security/pom.xml" />
         <option value="$PROJECT_DIR$/spring-testcontainers/pom.xml" />
       </set>
     </option>

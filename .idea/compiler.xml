@@ -6,17 +6,19 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="spring-data-r2dbc" />
-        <module name="spring-security" />
+        <module name="spring-quartz" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="spring-data-jdbc" target="8" />
-      <module name="spring-jdbc" target="8" />
+      <module name="spring-data-jdbc" target="1.8" />
+      <module name="spring-data-r2dbc" target="1.8" />
+      <module name="spring-es" target="1.8" />
+      <module name="spring-jdbc" target="1.8" />
       <module name="spring-keyclock" target="8" />
-      <module name="spring-mybatis" target="8" />
+      <module name="spring-mybatis" target="1.8" />
       <module name="spring-r2dbc" target="8" />
-      <module name="spring-testcontainers" target="8" />
+      <module name="spring-security" target="8" />
+      <module name="spring-testcontainers" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
