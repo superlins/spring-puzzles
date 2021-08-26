@@ -127,16 +127,18 @@ public final class JobTriggers {
     public Trigger defineTrigger() {
         Trigger trigger;
 
-        trigger = newTrigger()
-                .withIdentity("trigger1", "group1")
-                // .startNow()
-                .withSchedule(simpleSchedule().withIntervalInSeconds(60).repeatForever())
-                .build();
-
         // trigger = newTrigger()
-        //         .withIdentity("trigger", "group")
-        //         .withSchedule(CronScheduleBuilder.cronSchedule("0/10 * 8-17 26-5 8-9 ? 2021"))
+        //         .withIdentity("trigger1", "group1")
+        //         // .startNow()
+        //         // .withSchedule(calendarIntervalSchedule()
+        //         //         .withIntervalInMinutes(60))
+        //         .withSchedule(simpleSchedule().withIntervalInMinutes(60).repeatForever())
         //         .build();
+
+        trigger = newTrigger()
+                .withIdentity("trigger", "group")
+                .withSchedule(CronScheduleBuilder.cronSchedule("0/10 * 8-17 26-5 8-9 ? 2021"))
+                .build();
 
         return trigger;
     }
