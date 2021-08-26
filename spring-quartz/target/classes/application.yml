@@ -1,0 +1,19 @@
+spring:
+  quartz:
+    job-store-type: memory
+    wait-for-jobs-to-complete-on-shutdown: true
+    overwrite-existing-jobs: true
+#    properties:
+#      org:
+#        quartz:
+#          scheduler:
+#            instanceId: AUTO
+#          jobStore:
+#            class: org.quartz.impl.jdbcjobstore.JobStoreTX
+#            driverDelegateClass: org.quartz.impl.jdbcjobstore.StdJDBCDelegate
+#            useProperties: false
+#          threadPool:
+#            class: org.quartz.simpl.SimpleThreadPool
+#            threadCount: 10
+#            threadPriority: 5
+#            threadsInheritContextClassLoaderOfInitializingThread: true
