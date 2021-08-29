@@ -6,13 +6,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="spring-data-jdbc" />
-        <module name="spring-jdbc" />
         <module name="spring-data-r2dbc" />
+        <module name="spring-data-jdbc" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="spring-es" target="1.8" />
+      <module name="spring-jdbc" target="8" />
       <module name="spring-keyclock" target="8" />
       <module name="spring-mybatis" target="1.8" />
       <module name="spring-quartz" target="1.8" />

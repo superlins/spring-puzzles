@@ -10,10 +10,9 @@
     <version>1.0.0</version>
 
     <modules>
-        <module>spring-jdbc</module>
         <module>spring-data-jdbc</module>
-        <module>spring-mybatis</module>
         <module>spring-data-r2dbc</module>
+        <module>spring-mybatis</module>
         <module>spring-testcontainers</module>
         <module>spring-keyclock</module>
         <module>spring-security</module>

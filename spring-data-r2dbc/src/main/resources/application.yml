@@ -1,0 +1,9 @@
+spring:
+  r2dbc:
+    url: r2dbc:mysql://localhost:3306/employees
+    username: root
+    password: root
+
+logging:
+  level:
+    org.springframework.r2dbc: debug
