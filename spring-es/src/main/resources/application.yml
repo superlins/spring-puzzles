@@ -6,3 +6,7 @@ spring:
           endpoints: localhost:9200
       repositories:
         enabled: false
+
+logging:
+  level:
+    org.springframework.data.elasticsearch.client.WIRE: trace

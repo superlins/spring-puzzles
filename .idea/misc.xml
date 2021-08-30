@@ -9,12 +9,8 @@
     </option>
     <option name="ignoredFiles">
       <set>
-        <option value="$PROJECT_DIR$/spring-es/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-data-r2dbc/pom.xml" />
         <option value="$PROJECT_DIR$/spring-keyclock/pom.xml" />
-        <option value="$PROJECT_DIR$/spring-mybatis/pom.xml" />
-        <option value="$PROJECT_DIR$/spring-quartz/pom.xml" />
-        <option value="$PROJECT_DIR$/spring-security/pom.xml" />
-        <option value="$PROJECT_DIR$/spring-testcontainers/pom.xml" />
       </set>
     </option>
   </component>
