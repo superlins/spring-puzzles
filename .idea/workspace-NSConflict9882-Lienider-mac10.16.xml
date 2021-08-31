@@ -1,0 +1,781 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="AutomaticModuleUnloader">
+    <loaded-modules>
+      <module name="spring-es" />
+      <module name="spring-data-jdbc" />
+      <module name="spring-keyclock" />
+      <module name="spring-quartz" />
+      <module name="spring-mybatis" />
+      <module name="spring-testcontainers" />
+      <module name="spring-security" />
+      <module name="spring-puzzles" />
+    </loaded-modules>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6914b1b3-3b41-42ce-a1de-9685bdf44fae" name="Changes" comment="feat(spring-puzzles): spring data r2dbc">
+      <change afterPath="$PROJECT_DIR$/spring-es/src/test/java/org/example/es/ElasticSearchApplicationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-es/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-es/pom.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Class" />
+        <option value="JUnit5 Test Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="$MAVEN_REPOSITORY$" />
+        <option name="mavenHome" value="/usr/local/Cellar/maven/3.6.3_1/libexec" />
+        <option name="userSettingsFile" value="/usr/local/Cellar/maven/3.6.3_1/libexec/conf/settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="MavenRunner">
+    <option name="jreName" value="1.8" />
+  </component>
+  <component name="ProjectId" id="1wiSC3IaJFl4xCL5Bk0We8a0fEH" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="mysql&#10;mariadb" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelOrder2" value="2" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RequestMappingsPanelWidth2" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="jdk.selected.JAVA_MODULE" value="1.8" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/spring-data-jdbc/src/main/resources" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
+  <component name="RebelAgentSelection">
+    <selection>jr</selection>
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="org.example.r2dbc.repo" />
+      <recent name="org.example.r2dbc.conf" />
+      <recent name="org.example.quartz.schedule" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/spring-data-jdbc/src/main/resources" />
+      <recent name="$PROJECT_DIR$/spring-data-r2dbc/src/test" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/spring-data-jdbc/src/main/resources" />
+      <recent name="$PROJECT_DIR$/spring-data-r2dbc/src/main/resources" />
+      <recent name="$PROJECT_DIR$/spring-data-jdbc/src/test" />
+      <recent name="$PROJECT_DIR$/spring-jdbc/src/test/resources" />
+      <recent name="$PROJECT_DIR$/spring-quartz/src/main/resources/sql" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="org.example.r2dbc" />
+      <recent name="org.example.jdbc" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="org.example.es" />
+      <recent name="org.example.r2dbc.repo" />
+      <recent name="org.example.r2dbc" />
+      <recent name="org.example.service" />
+      <recent name="org.example.jdbc" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.example.r2dbc" />
+      <recent name="org.example.data.jdbc" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="JUnit.ElasticSearchApplicationTest.init">
+    <configuration name="ActorDatabaseClientTest.test_select_one_to_many" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring-data-r2dbc" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.ActorDatabaseClientTest" />
+      <option name="METHOD_NAME" value="test_select_one_to_many" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ElasticSearchApplicationTest.init" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring-es" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.es.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.es" />
+      <option name="MAIN_CLASS_NAME" value="org.example.es.ElasticSearchApplicationTest" />
+      <option name="METHOD_NAME" value="init" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PersonRepositoryTest.init" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring-data-r2dbc" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.r2dbc.repo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.r2dbc.repo" />
+      <option name="MAIN_CLASS_NAME" value="org.example.r2dbc.repo.PersonRepositoryTest" />
+      <option name="METHOD_NAME" value="init" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PersonRepositoryTest.readsAllEntitiesCorrectly" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring-data-r2dbc" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.r2dbc.repo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.r2dbc.repo" />
+      <option name="MAIN_CLASS_NAME" value="org.example.r2dbc.repo.PersonRepositoryTest" />
+      <option name="METHOD_NAME" value="readsAllEntitiesCorrectly" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PersonRepositoryTest.setFixedFirstnameFor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring-data-r2dbc" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.r2dbc.repo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.r2dbc.repo" />
+      <option name="MAIN_CLASS_NAME" value="org.example.r2dbc.repo.PersonRepositoryTest" />
+      <option name="METHOD_NAME" value="setFixedFirstnameFor" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.ElasticSearchApplicationTest.init" />
+        <item itemvalue="JUnit.PersonRepositoryTest.setFixedFirstnameFor" />
+        <item itemvalue="JUnit.PersonRepositoryTest.readsAllEntitiesCorrectly" />
+        <item itemvalue="JUnit.PersonRepositoryTest.init" />
+        <item itemvalue="JUnit.ActorDatabaseClientTest.test_select_one_to_many" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6914b1b3-3b41-42ce-a1de-9685bdf44fae" name="Changes" comment="" />
+      <created>1628939784718</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1628939784718</updated>
+      <workItem from="1628939788324" duration="4938000" />
+      <workItem from="1628951798370" duration="642000" />
+      <workItem from="1629625129480" duration="12399000" />
+      <workItem from="1629683514196" duration="10534000" />
+      <workItem from="1629699198182" duration="952000" />
+      <workItem from="1629700451241" duration="5606000" />
+      <workItem from="1629709701897" duration="2532000" />
+      <workItem from="1629768387432" duration="803000" />
+      <workItem from="1629879858977" duration="1360000" />
+      <workItem from="1629959869306" duration="14770000" />
+      <workItem from="1629985610798" duration="7137000" />
+      <workItem from="1630059462099" duration="2002000" />
+      <workItem from="1630068765204" duration="165000" />
+      <workItem from="1630074841721" duration="11305000" />
+      <workItem from="1630120885025" duration="49952000" />
+      <workItem from="1630249487005" duration="444000" />
+      <workItem from="1630286588058" duration="1816000" />
+    </task>
+    <task id="LOCAL-00001" summary="feat(spring-puzzles): puzzles init">
+      <created>1628940433917</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1628940433917</updated>
+    </task>
+    <task id="LOCAL-00002" summary="feat(spring-puzzles): puzzles-security practice">
+      <created>1629712626379</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1629712626379</updated>
+    </task>
+    <task id="LOCAL-00003" summary="feat(spring-puzzles): puzzles-quartz practice">
+      <created>1629975413408</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1629975413408</updated>
+    </task>
+    <task id="LOCAL-00004" summary="feat(spring-puzzles): puzzles-quartz job listener">
+      <created>1629992424955</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1629992424955</updated>
+    </task>
+    <task id="LOCAL-00005" summary="feat(spring-puzzles): puzzles-quartz trigger/scheduler listener">
+      <created>1629994523566</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1629994523566</updated>
+    </task>
+    <task id="LOCAL-00006" summary="feat(spring-puzzles): spring jdbc about init">
+      <created>1630062376750</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1630062376750</updated>
+    </task>
+    <task id="LOCAL-00007" summary="feat(spring-puzzles): spring data r2dbc">
+      <created>1630244203207</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1630244203207</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="dependencySupport" implementationName="java:org.slf4j:jul-to-slf4j" />
+    <option featureType="dependencySupport" implementationName="java:jakarta.xml.bind:jakarta.xml.bind-api" />
+    <option featureType="dependencySupport" implementationName="java:io.projectreactor.addons:reactor-pool" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.data:spring-data-relational" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.security:spring-security-web" />
+    <option featureType="dependencySupport" implementationName="java:io.zipkin.brave:brave" />
+    <option featureType="dependencySupport" implementationName="java:com.zaxxer:HikariCP" />
+    <option featureType="dependencySupport" implementationName="java:org.quartz-scheduler:quartz" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework:spring-webmvc" />
+    <option featureType="dependencySupport" implementationName="java:net.minidev:accessors-smart" />
+    <option featureType="dependencySupport" implementationName="java:org.apache.tomcat.embed:tomcat-embed-core" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework:spring-test" />
+    <option featureType="dependencySupport" implementationName="java:org.elasticsearch.plugin:mapper-extras-client" />
+    <option featureType="dependencySupport" implementationName="java:com.fasterxml.jackson.datatype:jackson-datatype-jsr310" />
+    <option featureType="dependencySupport" implementationName="java:org.apache.lucene:lucene-queries" />
+    <option featureType="dependencySupport" implementationName="java:org.apache.lucene:lucene-core" />
+    <option featureType="dependencySupport" implementationName="java:org.hibernate:hibernate-core" />
+    <option featureType="dependencySupport" implementationName="java:org.skyscreamer:jsonassert" />
+    <option featureType="dependencySupport" implementationName="java:org.mockito:mockito-junit-jupiter" />
+    <option featureType="dependencySupport" implementationName="java:org.glassfish.jaxb:txw2" />
+    <option featureType="dependencySupport" implementationName="java:org.rnorth.duct-tape:duct-tape" />
+    <option featureType="dependencySupport" implementationName="java:org.opentest4j:opentest4j" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.boot:spring-boot-starter-data-elasticsearch" />
+    <option featureType="dependencySupport" implementationName="java:org.elasticsearch.client:elasticsearch-rest-high-level-client" />
+    <option featureType="dependencySupport" implementationName="java:org.junit.jupiter:junit-jupiter" />
+    <option featureType="dependencySupport" implementationName="java:org.elasticsearch:elasticsearch-geo" />
+    <option featureType="dependencySupport" implementationName="java:org.apache.lucene:lucene-memory" />
+    <option featureType="dependencySupport" implementationName="java:io.projectreactor.netty:reactor-netty-http" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework:spring-web" />
+    <option featureType="dependencySupport" implementationName="java:org.attoparser:attoparser" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.boot:spring-boot-starter-logging" />
+    <option featureType="dependencySupport" implementationName="java:org.elasticsearch:elasticsearch-cli" />
+    <option featureType="dependencySupport" implementationName="java:io.zipkin.brave:brave-instrumentation-http" />
+    <option featureType="dependencySupport" implementationName="java:com.carrotsearch:hppc" />
+    <option featureType="dependencySupport" implementationName="java:com.github.docker-java:docker-java-transport" />
+    <option featureType="dependencySupport" implementationName="java:com.fasterxml.jackson.core:jackson-databind" />
+    <option featureType="dependencySupport" implementationName="java:org.apache.logging.log4j:log4j-to-slf4j" />
+    <option featureType="dependencySupport" implementationName="java:org.keycloak:keycloak-spring-security-adapter" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.boot:spring-boot-starter" />
+    <option featureType="dependencySupport" implementationName="java:org.jboss.logging:jboss-logging" />
+    <option featureType="dependencySupport" implementationName="java:org.slf4j:slf4j-api" />
+    <option featureType="dependencySupport" implementationName="java:net.java.dev.jna:jna" />
+    <option featureType="dependencySupport" implementationName="java:io.projectreactor:reactor-test" />
+    <option featureType="dependencySupport" implementationName="java:org.yaml:snakeyaml" />
+    <option featureType="dependencySupport" implementationName="java:antlr:antlr" />
+    <option featureType="dependencySupport" implementationName="java:org.elasticsearch.plugin:parent-join-client" />
+    <option featureType="dependencySupport" implementationName="java:org.postgresql:postgresql" />
+    <option featureType="dependencySupport" implementationName="java:org.apache.lucene:lucene-spatial3d" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.boot:spring-boot-starter-json" />
+    <option featureType="dependencySupport" implementationName="java:com.github.spullara.mustache.java:compiler" />
+    <option featureType="dependencySupport" implementationName="java:org.testcontainers:testcontainers" />
+    <option featureType="dependencySupport" implementationName="java:org.reactivestreams:reactive-streams" />
+    <option featureType="dependencySupport" implementationName="java:org.apache.httpcomponents:httpclient" />
+    <option featureType="dependencySupport" implementationName="java:mysql:mysql-connector-java" />
+    <option featureType="dependencySupport" implementationName="java:com.vaadin.external.google:android-json" />
+    <option featureType="dependencySupport" implementationName="java:org.elasticsearch:jna" />
+    <option featureType="dependencySupport" implementationName="java:org.apiguardian:apiguardian-api" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.boot:spring-boot-starter-data-jdbc" />
+    <option featureType="dependencySupport" implementationName="java:com.fasterxml.jackson.dataformat:jackson-dataformat-smile" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework:spring-jdbc" />
+    <option featureType="dependencySupport" implementationName="java:org.mockito:mockito-core" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.boot:spring-boot-starter-jdbc" />
+    <option featureType="dependencySupport" implementationName="java:com.mchange:mchange-commons-java" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.boot:spring-boot-starter-security" />
+    <option featureType="dependencySupport" implementationName="java:net.bytebuddy:byte-buddy" />
+    <option featureType="dependencySupport" implementationName="java:io.r2dbc:r2dbc-spi" />
+    <option featureType="dependencySupport" implementationName="java:commons-codec:commons-codec" />
+    <option featureType="dependencySupport" implementationName="java:org.keycloak:keycloak-spring-boot-2-adapter" />
+    <option featureType="dependencySupport" implementationName="java:org.hamcrest:hamcrest" />
+    <option featureType="dependencySupport" implementationName="java:org.junit.platform:junit-platform-engine" />
+    <option featureType="dependencySupport" implementationName="java:net.bytebuddy:byte-buddy-agent" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.data:spring-data-commons" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.data:spring-data-r2dbc" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework:spring-webflux" />
+    <option featureType="dependencySupport" implementationName="java:io.netty:netty-resolver" />
+    <option featureType="dependencySupport" implementationName="java:org.jboss:jandex" />
+    <option featureType="dependencySupport" implementationName="java:org.elasticsearch:elasticsearch" />
+    <option featureType="dependencySupport" implementationName="java:org.keycloak:keycloak-authz-client" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.data:spring-data-elasticsearch" />
+    <option featureType="dependencySupport" implementationName="java:com.jayway.jsonpath:json-path" />
+    <option featureType="dependencySupport" implementationName="java:org.hibernate.common:hibernate-commons-annotations" />
+    <option featureType="dependencySupport" implementationName="java:org.apache.commons:commons-compress" />
+    <option featureType="dependencySupport" implementationName="java:org.thymeleaf:thymeleaf" />
+    <option featureType="dependencySupport" implementationName="java:org.keycloak:spring-boot-container-bundle" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.security:spring-security-core" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.data:spring-data-jpa" />
+    <option featureType="dependencySupport" implementationName="java:io.netty:netty-buffer" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.boot:spring-boot-starter-quartz" />
+    <option featureType="dependencySupport" implementationName="java:org.junit.jupiter:junit-jupiter-engine" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.boot:spring-boot-starter-reactor-netty" />
+    <option featureType="dependencySupport" implementationName="java:org.jetbrains:annotations" />
+    <option featureType="dependencySupport" implementationName="java:org.unbescape:unbescape" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.boot:spring-boot-starter-tomcat" />
+    <option featureType="dependencySupport" implementationName="java:com.fasterxml.jackson.core:jackson-annotations" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.boot:spring-boot-test" />
+    <option featureType="dependencySupport" implementationName="java:org.elasticsearch:elasticsearch-plugin-classloader" />
+    <option featureType="dependencySupport" implementationName="java:com.fasterxml.jackson.core:jackson-core" />
+    <option featureType="dependencySupport" implementationName="java:com.fasterxml.jackson.dataformat:jackson-dataformat-cbor" />
+    <option featureType="dependencySupport" implementationName="java:jakarta.persistence:jakarta.persistence-api" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.boot:spring-boot-starter-data-r2dbc" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework:spring-context" />
+    <option featureType="dependencySupport" implementationName="java:com.sun.istack:istack-commons-runtime" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework:spring-aop" />
+    <option featureType="dependencySupport" implementationName="java:org.junit.jupiter:junit-jupiter-api" />
+    <option featureType="dependencySupport" implementationName="java:net.minidev:json-smart" />
+    <option featureType="dependencySupport" implementationName="java:io.netty:netty-codec-http2" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.boot:spring-boot-starter-web" />
+    <option featureType="dependencySupport" implementationName="java:org.apache.tomcat.embed:tomcat-embed-el" />
+    <option featureType="dependencySupport" implementationName="java:org.testcontainers:postgresql" />
+    <option featureType="dependencySupport" implementationName="java:org.keycloak:keycloak-adapter-core" />
+    <option featureType="dependencySupport" implementationName="java:org.keycloak:keycloak-spring-boot-starter" />
+    <option featureType="dependencySupport" implementationName="java:org.apache.logging.log4j:log4j-api" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework:spring-core" />
+    <option featureType="dependencySupport" implementationName="java:org.javassist:javassist" />
+    <option featureType="dependencySupport" implementationName="java:org.hamcrest:hamcrest-core" />
+    <option featureType="dependencySupport" implementationName="java:org.thymeleaf:thymeleaf-spring5" />
+    <option featureType="dependencySupport" implementationName="java:io.netty:netty-resolver-dns" />
+    <option featureType="dependencySupport" implementationName="java:io.netty:netty-handler-proxy" />
+    <option featureType="dependencySupport" implementationName="java:org.elasticsearch:elasticsearch-secure-sm" />
+    <option featureType="dependencySupport" implementationName="java:org.aspectj:aspectjweaver" />
+    <option featureType="dependencySupport" implementationName="java:io.netty:netty-transport-native-unix-common" />
+    <option featureType="dependencySupport" implementationName="java:com.fasterxml:classmate" />
+    <option featureType="dependencySupport" implementationName="java:io.netty:netty-transport" />
+    <option featureType="dependencySupport" implementationName="java:org.glassfish.jaxb:jaxb-runtime" />
+    <option featureType="dependencySupport" implementationName="java:org.apache.tomcat.embed:tomcat-embed-websocket" />
+    <option featureType="dependencySupport" implementationName="java:ch.qos.logback:logback-classic" />
+    <option featureType="dependencySupport" implementationName="java:io.projectreactor.netty:reactor-netty-core" />
+    <option featureType="dependencySupport" implementationName="java:io.netty:netty-resolver-dns-native-macos" />
+    <option featureType="dependencySupport" implementationName="java:org.objenesis:objenesis" />
+    <option featureType="dependencySupport" implementationName="java:com.tdunning:t-digest" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework:spring-tx" />
+    <option featureType="dependencySupport" implementationName="java:junit:junit" />
+    <option featureType="dependencySupport" implementationName="java:com.fasterxml.jackson.dataformat:jackson-dataformat-yaml" />
+    <option featureType="dependencySupport" implementationName="java:org.apache.lucene:lucene-backward-codecs" />
+    <option featureType="dependencySupport" implementationName="java:org.apache.lucene:lucene-spatial-extras" />
+    <option featureType="dependencySupport" implementationName="java:org.testcontainers:jdbc" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework:spring-jcl" />
+    <option featureType="dependencySupport" implementationName="java:io.zipkin.reporter2:zipkin-reporter" />
+    <option featureType="dependencySupport" implementationName="java:org.elasticsearch:elasticsearch-x-content" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.boot:spring-boot-starter-aop" />
+    <option featureType="dependencySupport" implementationName="java:org.apache.lucene:lucene-highlighter" />
+    <option featureType="dependencySupport" implementationName="java:org.bouncycastle:bcprov-jdk15on" />
+    <option featureType="dependencySupport" implementationName="java:org.apache.httpcomponents:httpcore" />
+    <option featureType="dependencySupport" implementationName="java:ch.qos.logback:logback-core" />
+    <option featureType="dependencySupport" implementationName="java:org.checkerframework:checker-qual" />
+    <option featureType="dependencySupport" implementationName="java:org.elasticsearch:elasticsearch-core" />
+    <option featureType="dependencySupport" implementationName="java:net.sf.jopt-simple:jopt-simple" />
+    <option featureType="dependencySupport" implementationName="java:com.github.docker-java:docker-java-api" />
+    <option featureType="dependencySupport" implementationName="java:dev.miku:r2dbc-mysql" />
+    <option featureType="dependencySupport" implementationName="java:org.jetbrains.kotlin:kotlin-stdlib-jdk7" />
+    <option featureType="dependencySupport" implementationName="java:org.ow2.asm:asm" />
+    <option featureType="dependencySupport" implementationName="java:org.jetbrains.kotlin:kotlin-stdlib-jdk8" />
+    <option featureType="dependencySupport" implementationName="java:org.jetbrains.kotlin:kotlin-stdlib-common" />
+    <option featureType="dependencySupport" implementationName="java:org.thymeleaf.extras:thymeleaf-extras-java8time" />
+    <option featureType="dependencySupport" implementationName="java:org.apache.lucene:lucene-sandbox" />
+    <option featureType="dependencySupport" implementationName="java:org.apache.lucene:lucene-grouping" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.boot:spring-boot-autoconfigure" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.boot:spring-boot-test-autoconfigure" />
+    <option featureType="dependencySupport" implementationName="java:io.zipkin.reporter2:zipkin-reporter-brave" />
+    <option featureType="dependencySupport" implementationName="java:io.projectreactor:reactor-core" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework:spring-expression" />
+    <option featureType="dependencySupport" implementationName="java:com.fasterxml.jackson.datatype:jackson-datatype-jdk8" />
+    <option featureType="dependencySupport" implementationName="java:org.jetbrains.kotlin:kotlin-stdlib" />
+    <option featureType="dependencySupport" implementationName="java:org.rnorth.visible-assertions:visible-assertions" />
+    <option featureType="dependencySupport" implementationName="java:org.elasticsearch.client:elasticsearch-rest-client" />
+    <option featureType="dependencySupport" implementationName="java:org.assertj:assertj-core" />
+    <option featureType="dependencySupport" implementationName="java:com.fasterxml.jackson.module:jackson-module-parameter-names" />
+    <option featureType="dependencySupport" implementationName="java:io.projectreactor.netty:reactor-netty" />
+    <option featureType="dependencySupport" implementationName="java:com.github.docker-java:docker-java-transport-zerodep" />
+    <option featureType="dependencySupport" implementationName="java:jakarta.transaction:jakarta.transaction-api" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.boot:spring-boot-starter-thymeleaf" />
+    <option featureType="dependencySupport" implementationName="java:org.hdrhistogram:HdrHistogram" />
+    <option featureType="dependencySupport" implementationName="java:org.xmlunit:xmlunit-core" />
+    <option featureType="dependencySupport" implementationName="java:org.junit.jupiter:junit-jupiter-params" />
+    <option featureType="dependencySupport" implementationName="java:io.netty:netty-transport-native-epoll" />
+    <option featureType="dependencySupport" implementationName="java:org.apache.lucene:lucene-join" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.boot:spring-boot-starter-data-jpa" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework:spring-aspects" />
+    <option featureType="dependencySupport" implementationName="java:org.elasticsearch.plugin:transport-netty4-client" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.boot:spring-boot-starter-webflux" />
+    <option featureType="dependencySupport" implementationName="java:com.h2database:h2" />
+    <option featureType="dependencySupport" implementationName="java:org.dom4j:dom4j" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.boot:spring-boot-starter-test" />
+    <option featureType="dependencySupport" implementationName="java:org.keycloak:keycloak-spring-boot-adapter-core" />
+    <option featureType="dependencySupport" implementationName="java:org.apache.lucene:lucene-analyzers-common" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework:spring-beans" />
+    <option featureType="dependencySupport" implementationName="java:org.keycloak:keycloak-adapter-spi" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.security:spring-security-config" />
+    <option featureType="dependencySupport" implementationName="java:io.netty:netty-codec-http" />
+    <option featureType="dependencySupport" implementationName="java:io.netty:netty-codec-socks" />
+    <option featureType="dependencySupport" implementationName="java:joda-time:joda-time" />
+    <option featureType="dependencySupport" implementationName="java:jakarta.activation:jakarta.activation-api" />
+    <option featureType="dependencySupport" implementationName="java:org.keycloak:keycloak-common" />
+    <option featureType="dependencySupport" implementationName="java:io.netty:netty-codec-dns" />
+    <option featureType="dependencySupport" implementationName="java:org.elasticsearch.plugin:aggs-matrix-stats-client" />
+    <option featureType="dependencySupport" implementationName="java:io.netty:netty-common" />
+    <option featureType="dependencySupport" implementationName="java:org.apache.httpcomponents:httpasyncclient" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.boot:spring-boot" />
+    <option featureType="dependencySupport" implementationName="java:org.elasticsearch.plugin:lang-mustache-client" />
+    <option featureType="dependencySupport" implementationName="java:io.netty:netty-codec" />
+    <option featureType="dependencySupport" implementationName="java:io.zipkin.zipkin2:zipkin" />
+    <option featureType="dependencySupport" implementationName="java:org.apache.lucene:lucene-suggest" />
+    <option featureType="dependencySupport" implementationName="java:org.apache.lucene:lucene-queryparser" />
+    <option featureType="dependencySupport" implementationName="java:org.apache.lucene:lucene-misc" />
+    <option featureType="dependencySupport" implementationName="java:org.testcontainers:database-commons" />
+    <option featureType="dependencySupport" implementationName="java:org.junit.platform:junit-platform-commons" />
+    <option featureType="dependencySupport" implementationName="java:io.r2dbc:r2dbc-pool" />
+    <option featureType="dependencySupport" implementationName="java:jakarta.annotation:jakarta.annotation-api" />
+    <option featureType="dependencySupport" implementationName="java:io.projectreactor.netty:reactor-netty-http-brave" />
+    <option featureType="dependencySupport" implementationName="java:org.elasticsearch.plugin:rank-eval-client" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework:spring-orm" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework:spring-context-support" />
+    <option featureType="dependencySupport" implementationName="java:org.apache.httpcomponents:httpcore-nio" />
+    <option featureType="dependencySupport" implementationName="java:org.keycloak:keycloak-core" />
+    <option featureType="dependencySupport" implementationName="java:io.projectreactor.addons:reactor-extra" />
+    <option featureType="dependencySupport" implementationName="java:org.testcontainers:mysql" />
+    <option featureType="dependencySupport" implementationName="java:io.netty:netty-handler" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.data:spring-data-jdbc" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework:spring-r2dbc" />
+    <option featureType="dependencySupport" implementationName="java:org.bouncycastle:bcpkix-jdk15on" />
+    <option featureType="dependencySupport" implementationName="java:com.sun.activation:jakarta.activation" />
+  </component>
+  <component name="UnloadedModulesList">
+    <module name="spring-data-jdbc" />
+    <module name="spring-data-r2dbc" />
+    <module name="spring-keyclock" />
+    <module name="spring-mybatis" />
+    <module name="spring-quartz" />
+    <module name="spring-r2dbc" />
+    <module name="spring-security" />
+    <module name="spring-testcontainers" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="feat(spring-puzzles): puzzles init" />
+    <MESSAGE value="feat(spring-puzzles): puzzles-security practice" />
+    <MESSAGE value="feat(spring-puzzles): puzzles-quartz practice" />
+    <MESSAGE value="feat(spring-puzzles): puzzles-quartz job listener" />
+    <MESSAGE value="feat(spring-puzzles): puzzles-quartz trigger/scheduler listener" />
+    <MESSAGE value="feat(spring-puzzles): spring jdbc about init" />
+    <MESSAGE value="feat(spring-puzzles): spring data r2dbc" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(spring-puzzles): spring data r2dbc" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/spring-keyclock/src/main/java/org/example/keyclock/WebController.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/spring-keyclock/src/main/java/org/example/keyclock/WebController.java</url>
+          <line>20</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/keycloak/keycloak-spring-security-adapter/15.0.2/keycloak-spring-security-adapter-15.0.2-sources.jar!/org/keycloak/adapters/springsecurity/filter/KeycloakAuthenticationProcessingFilter.java</url>
+          <line>143</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/9.0.46/tomcat-embed-core-9.0.46-sources.jar!/org/apache/catalina/core/ApplicationFilterChain.java</url>
+          <line>202</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/2.5.0/spring-boot-autoconfigure-2.5.0-sources.jar!/org/springframework/boot/autoconfigure/web/servlet/HttpEncodingAutoConfiguration.java</url>
+          <line>62</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.3.7/spring-web-5.3.7-sources.jar!/org/springframework/web/filter/OncePerRequestFilter.java</url>
+          <line>118</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/5.5.0/spring-security-web-5.5.0-sources.jar!/org/springframework/security/web/context/AbstractSecurityWebApplicationInitializer.java</url>
+          <line>104</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/5.5.0/spring-security-web-5.5.0-sources.jar!/org/springframework/security/web/FilterChainProxy.java</url>
+          <line>335</line>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.3.7/spring-web-5.3.7-sources.jar!/org/springframework/web/filter/DelegatingFilterProxy.java</url>
+          <line>270</line>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/5.5.0/spring-security-config-5.5.0-sources.jar!/org/springframework/security/config/annotation/web/configuration/WebSecurityConfiguration.java</url>
+          <line>178</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.3.7/spring-web-5.3.7-sources.jar!/org/springframework/web/filter/DelegatingFilterProxy.java</url>
+          <line>357</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/5.5.0/spring-security-web-5.5.0-sources.jar!/org/springframework/security/web/authentication/AbstractAuthenticationProcessingFilter.java</url>
+          <line>211</line>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/5.5.0/spring-security-web-5.5.0-sources.jar!/org/springframework/security/web/authentication/AbstractAuthenticationProcessingFilter.java</url>
+          <line>216</line>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/5.5.0/spring-security-web-5.5.0-sources.jar!/org/springframework/security/web/authentication/AbstractAuthenticationProcessingFilter.java</url>
+          <line>221</line>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/5.5.0/spring-security-web-5.5.0-sources.jar!/org/springframework/security/web/authentication/UsernamePasswordAuthenticationFilter.java</url>
+          <line>84</line>
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/5.5.0/spring-security-core-5.5.0-sources.jar!/org/springframework/security/authentication/ProviderManager.java</url>
+          <line>165</line>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/5.5.0/spring-security-core-5.5.0-sources.jar!/org/springframework/security/authentication/ProviderManager.java</url>
+          <line>200</line>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/5.5.0/spring-security-core-5.5.0-sources.jar!/org/springframework/security/authentication/ProviderManager.java</url>
+          <line>181</line>
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/5.5.0/spring-security-config-5.5.0-sources.jar!/org/springframework/security/config/annotation/authentication/configuration/InitializeUserDetailsBeanManagerConfigurer.java</url>
+          <line>58</line>
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/5.5.0/spring-security-config-5.5.0-sources.jar!/org/springframework/security/config/annotation/authentication/configuration/InitializeAuthenticationProviderBeanManagerConfigurer.java</url>
+          <line>53</line>
+          <option name="timeStamp" value="44" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/5.5.0/spring-security-config-5.5.0-sources.jar!/org/springframework/security/config/annotation/authentication/configuration/InitializeUserDetailsBeanManagerConfigurer.java</url>
+          <line>76</line>
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/5.5.0/spring-security-config-5.5.0-sources.jar!/org/springframework/security/config/annotation/web/configuration/WebSecurityConfiguration.java</url>
+          <line>114</line>
+          <option name="timeStamp" value="48" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/5.5.0/spring-security-config-5.5.0-sources.jar!/org/springframework/security/config/annotation/web/configuration/WebSecurityConfiguration.java</url>
+          <line>126</line>
+          <option name="timeStamp" value="52" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/5.5.0/spring-security-core-5.5.0-sources.jar!/org/springframework/security/authentication/dao/AbstractUserDetailsAuthenticationProvider.java</url>
+          <line>146</line>
+          <option name="timeStamp" value="53" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/spring-quartz/src/main/java/org/example/quartz/schedule/listener/QuartzJobListener.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="57" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/spring-quartz/src/main/java/org/example/quartz/schedule/listener/QuartzJobListener.java</url>
+          <line>34</line>
+          <option name="timeStamp" value="58" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/spring-quartz/src/main/java/org/example/quartz/schedule/listener/QuartzJobListener.java</url>
+          <line>43</line>
+          <option name="timeStamp" value="59" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/quartz-scheduler/quartz/2.3.2/quartz-2.3.2-sources.jar!/org/quartz/core/QuartzScheduler.java</url>
+          <line>1926</line>
+          <option name="timeStamp" value="62" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/spring-quartz/src/main/java/org/example/quartz/service/JobAcceptorService.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="63" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/spring-quartz/src/main/java/org/example/quartz/schedule/job/QuartzJob.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="64" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/quartz-scheduler/quartz/2.3.2/quartz-2.3.2-sources.jar!/org/quartz/core/QuartzScheduler.java</url>
+          <line>1946</line>
+          <option name="timeStamp" value="65" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/quartz-scheduler/quartz/2.3.2/quartz-2.3.2-sources.jar!/org/quartz/core/QuartzScheduler.java</url>
+          <line>1966</line>
+          <option name="timeStamp" value="66" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/spring-data-r2dbc/src/main/java/org/example/r2dbc/domain/Person.java</url>
+          <line>51</line>
+          <option name="timeStamp" value="88" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-r2dbc/1.3.1/spring-data-r2dbc-1.3.1-sources.jar!/org/springframework/data/r2dbc/convert/MappingR2dbcConverter.java</url>
+          <line>273</line>
+          <option name="timeStamp" value="97" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-r2dbc/1.3.1/spring-data-r2dbc-1.3.1-sources.jar!/org/springframework/data/r2dbc/convert/MappingR2dbcConverter.java</url>
+          <line>137</line>
+          <option name="timeStamp" value="106" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-r2dbc/1.3.1/spring-data-r2dbc-1.3.1-sources.jar!/org/springframework/data/r2dbc/repository/query/ExpressionEvaluatingParameterBinder.java</url>
+          <line>73</line>
+          <option name="timeStamp" value="120" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-r2dbc/1.3.1/spring-data-r2dbc-1.3.1-sources.jar!/org/springframework/data/r2dbc/repository/query/ExpressionEvaluatingParameterBinder.java</url>
+          <line>117</line>
+          <option name="timeStamp" value="122" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-r2dbc/1.3.1/spring-data-r2dbc-1.3.1-sources.jar!/org/springframework/data/r2dbc/repository/query/ExpressionEvaluatingParameterBinder.java</url>
+          <line>102</line>
+          <option name="timeStamp" value="123" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-r2dbc/5.3.7/spring-r2dbc-5.3.7-sources.jar!/org/springframework/r2dbc/core/DefaultDatabaseClient.java</url>
+          <line>342</line>
+          <option name="timeStamp" value="127" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="JUnit">
+        <watch expression="getConversions().hasCustomReadTarget(Row.class, rawType)" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>

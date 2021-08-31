@@ -18,6 +18,8 @@
         <module>spring-security</module>
         <module>spring-es</module>
         <module>spring-quartz</module>
+        <module>spring-batch</module>
+        <module>spring-audit</module>
     </modules>
 
     <properties>

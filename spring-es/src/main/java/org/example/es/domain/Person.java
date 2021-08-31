@@ -3,17 +3,23 @@ package org.example.es.domain;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.annotation.TypeAlias;
 import org.springframework.data.elasticsearch.annotations.Document;
+import org.springframework.data.elasticsearch.annotations.Field;
+import org.springframework.data.elasticsearch.annotations.FieldType;
 
 /**
  * @author renc
  */
 @TypeAlias("human")
-@Document(indexName = "index-person-#{T(java.time.LocalDate).now().toString()}")
+@Document(indexName = "person")
 public class Person {
 
     @Id
     String id;
+
+    @Field(type = FieldType.Text)
     String firstName;
+
+    @Field(type = FieldType.Text)
     String lastName;
 
     public String getId() {
