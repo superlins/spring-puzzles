@@ -67,13 +67,16 @@ class ActorR2dbcEntityTemplateTest {
     @Test
     void test_insert_with_instance() {
         Person person = new Person("joe3", "Joe", 34);
-
-        Mono<Person> saved = template.insert(person);
-        Mono<Person> loaded = template.selectOne(query(where("name").is("Joe")), Person.class);
+        template.insert(person);
     }
 
     @Test
     void test_complex_select() {
+        // Person person = new Person("joe3", "Joe", 34);
+        // Criteria criteria = Criteria.empty();
+        // if (person.getName() != null) {
+        //     criteria = criteria.where("name").is(person.getName());
+        // }
         Mono<Person> first = template.select(Person.class)
                 .from("person")
                 .matching(query(where("firstname").is("John")

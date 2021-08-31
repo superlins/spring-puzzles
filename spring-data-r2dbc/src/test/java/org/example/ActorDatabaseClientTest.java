@@ -12,6 +12,7 @@ import org.springframework.boot.test.autoconfigure.data.r2dbc.DataR2dbcTest;
 import org.springframework.data.r2dbc.convert.EntityRowMapper;
 import org.springframework.data.r2dbc.convert.R2dbcConverter;
 import org.springframework.r2dbc.core.DatabaseClient;
+import org.springframework.r2dbc.core.Parameter;
 import org.springframework.test.context.ContextConfiguration;
 import reactor.test.StepVerifier;
 
@@ -43,7 +44,7 @@ class ActorDatabaseClientTest {
                 .fetch()
                 .first()
                 .as(StepVerifier::create)
-                .expectNextCount(1)
+                .expectNextCount(0)
                 .verifyComplete();
     }
 
@@ -72,9 +73,12 @@ class ActorDatabaseClientTest {
     @Test
     void test_bind_vars_select() {
         client.sql("SELECT * FROM person WHERE name = :fn")
-                .bind("fn", "Joe")
+                // .bind("fn", Parameter.fromOrEmpty("Mike", String.class))
+                .bind("fn", Parameter.fromOrEmpty(null, String.class))
+                // .bindNull("fn", String.class)
                 .fetch()
                 .first()
+                .doOnNext(p -> System.out.println(p))
                 .as(StepVerifier::create)
                 .expectNextCount(1)
                 .verifyComplete();
