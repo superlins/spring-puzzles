@@ -1,11 +1,16 @@
 package org.example.security.support.security.conf;
 
+import com.google.code.kaptcha.Producer;
+import com.google.code.kaptcha.impl.DefaultKaptcha;
+import com.google.code.kaptcha.util.Config;
 import org.example.security.repo.UserRepository;
-import org.example.security.support.security.KaptchaDaoAuthenticationProvider;
-import org.example.security.support.security.UserDetailsServiceImpl;
+import org.example.security.support.security.*;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.access.AccessDecisionManager;
+import org.springframework.security.access.AccessDecisionVoter;
+import org.springframework.security.access.vote.AffirmativeBased;
+import org.springframework.security.access.vote.RoleVoter;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 import org.springframework.security.config.annotation.ObjectPostProcessor;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -13,11 +18,16 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.access.intercept.FilterInvocationSecurityMetadataSource;
 import org.springframework.security.web.access.intercept.FilterSecurityInterceptor;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+
+import java.util.List;
+import java.util.Properties;
 
 /**
  * @author renc
@@ -28,15 +38,23 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     private final UserRepository userRepository;
 
+    private final PasswordEncoder passwordEncoder;
+
     private final AccessDecisionManager accessDecisionManager;
+
+    private final JwtAuthenticationFilter jwtAuthenticationFilter;
 
     private final FilterInvocationSecurityMetadataSource filterInvocationSecurityMetadataSource;
 
     public WebSecurityConfig(UserRepository userRepository,
+                             PasswordEncoder passwordEncoder,
                              AccessDecisionManager accessDecisionManager,
+                             JwtAuthenticationFilter jwtAuthenticationFilter,
                              FilterInvocationSecurityMetadataSource filterInvocationSecurityMetadataSource) {
         this.userRepository = userRepository;
+        this.passwordEncoder = passwordEncoder;
         this.accessDecisionManager = accessDecisionManager;
+        this.jwtAuthenticationFilter = jwtAuthenticationFilter;
         this.filterInvocationSecurityMetadataSource = filterInvocationSecurityMetadataSource;
     }
 
@@ -49,8 +67,12 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .csrf().disable()
+                .sessionManagement()
+                .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+                .and()
+                .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class)
                 .authorizeRequests()
-                .antMatchers("/", "/static/*", "/css/*", "/js/*").permitAll()
+                .antMatchers("/static/*").permitAll()
                 // .antMatchers("/api/**").hasRole(STUDENT.name())
                 // .antMatchers(HttpMethod.POST, "/management/api/**").hasAuthority(UserPermission.COURSE_WRITE.getPermission())
                 // .antMatchers(HttpMethod.PUT, "/management/api/**").hasAuthority(UserPermission.COURSE_WRITE.getPermission())
@@ -61,10 +83,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .withObjectPostProcessor(filterSecurityInterceptorObjectPostProcessor()) // FilterSecurityInterceptor replace
                 // .and()
                 // .rememberMe()
-                // .tokenRepository(null)
-                // .tokenValiditySeconds(1)
                 .and()
                 .formLogin()
+                // .loginProcessingUrl("")
                 // .successHandler((req, resp, auth) -> {
                 //     resp.setContentType("application/json;charset=utf-8");
                 //     PrintWriter out = resp.getWriter();
@@ -79,8 +100,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 //     out.flush();
                 //     out.close();
                 // })
-        // .loginPage("")
-        // .loginProcessingUrl("")
+                .and()
+                .logout()
+                // .addLogoutHandler(null)
+                // .logoutSuccessHandler(null)
         ;
     }
 
@@ -98,8 +121,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         UserDetailsService userDetailsService = userDetailsService();
-        PasswordEncoder passwordEncoder = passwordEncoder();
-        DaoAuthenticationProvider provider = new KaptchaDaoAuthenticationProvider();
+        DaoAuthenticationProvider provider = new CaptchaDaoAuthenticationProvider();
         provider.setUserDetailsService(userDetailsService);
         provider.setPasswordEncoder(passwordEncoder);
         provider.afterPropertiesSet();
@@ -117,8 +139,49 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         return new UserDetailsServiceImpl(userRepository);
     }
 
-    @Bean
-    PasswordEncoder passwordEncoder() {
-        return new BCryptPasswordEncoder(10);
+    //----////----////----////----////----////----////----////----//
+
+    @Configuration(proxyBeanMethods = false)
+    static class NestedWebSecurityConfig {
+
+        @Bean
+        PasswordEncoder passwordEncoder() {
+            return new BCryptPasswordEncoder(10);
+        }
+
+        @Bean
+        FilterInvocationSecurityMetadataSource filterInvocationSecurityMetadataSource() {
+            return new DefaultFilterInvocationSecurityMetadataSource();
+        }
+
+        @Bean
+        AccessDecisionManager accessDecisionManager(List<AccessDecisionVoter<?>> accessDecisionVoters) {
+            return new AffirmativeBased(accessDecisionVoters);
+        }
+
+        @Bean
+        public RoleVoter roleVoter() {
+            return new RoleVoter();
+        }
+    }
+
+    @Configuration(proxyBeanMethods = false)
+    static class CaptchaSecurityConfig {
+
+        // TODO(renc): inject this
+        private CaptchaProperties captchaProperties;
+
+        @Bean
+        Producer verifyCode() {
+            Properties properties = new Properties();
+            properties.setProperty("kaptcha.image.width", "150");
+            properties.setProperty("kaptcha.image.height", "50");
+            properties.setProperty("kaptcha.textproducer.char.string", "0123456789");
+            properties.setProperty("kaptcha.textproducer.char.length", "4");
+            Config config = new Config(properties);
+            DefaultKaptcha defaultKaptcha = new DefaultKaptcha();
+            defaultKaptcha.setConfig(config);
+            return defaultKaptcha;
+        }
     }
 }

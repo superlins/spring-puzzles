@@ -16,7 +16,7 @@ import java.io.IOException;
  * @author renc
  */
 @RestController
-public class KaptchaController {
+public class CaptchaController {
 
     @Autowired
     private Producer producer;
