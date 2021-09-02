@@ -19,6 +19,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="spring-data-r2dbc" target="1.8" />
       <module name="spring-jdbc" target="1.8" />
       <module name="spring-keyclock" target="8" />
     </bytecodeTargetLevel>
