@@ -7,6 +7,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Repository;
 
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -21,12 +22,15 @@ public class UserRepository {
     private final Map<String, User> userMap = new HashMap<String, User>() {
         {
             put("admin", new User("admin", passwordEncoder.encode("admin"), UserRole.ADMIN.getGrantedAuthorities()));
-            put("stu", new User("stu", passwordEncoder.encode("123456"), UserRole.STUDENT.getGrantedAuthorities()));
-            put("trainee", new User("trainee", passwordEncoder.encode("123456"), UserRole.ADMIN_TRAINEE.getGrantedAuthorities()));
+            put("student", new User("student", passwordEncoder.encode("123456"), UserRole.STUDENT.getGrantedAuthorities()));
         }
     };
 
     public UserDetails loadUserByUsername(String username) {
         return userMap.get(username);
+    }
+
+    public Collection<User> findAll() {
+        return userMap.values();
     }
 }

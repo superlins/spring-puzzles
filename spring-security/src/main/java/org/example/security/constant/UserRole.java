@@ -13,20 +13,13 @@ import static java.util.Arrays.asList;
  */
 public enum UserRole {
 
-    STUDENT(new HashSet<>(asList(
-            UserPermission.COURSE_READ,
-            UserPermission.STUDENT_READ,
-            UserPermission.STUDENT_WRITE))),
-
-    ADMIN_TRAINEE(new HashSet<>(asList(
-            UserPermission.COURSE_READ,
-            UserPermission.STUDENT_READ))),
+    STUDENT(new HashSet<>(asList(UserPermission.STUDENT_SELECT))),
 
     ADMIN(new HashSet<>(asList(
-            UserPermission.COURSE_READ,
-            UserPermission.COURSE_WRITE,
-            UserPermission.STUDENT_READ,
-            UserPermission.STUDENT_WRITE)));
+            UserPermission.STUDENT_ADD,
+            UserPermission.STUDENT_DELETE,
+            UserPermission.STUDENT_UPDATE,
+            UserPermission.STUDENT_SELECT)));
 
     private Set<UserPermission> permissions;
 

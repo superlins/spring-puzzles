@@ -4,27 +4,27 @@ import com.google.code.kaptcha.Producer;
 import com.google.code.kaptcha.impl.DefaultKaptcha;
 import com.google.code.kaptcha.util.Config;
 import org.example.security.repo.UserRepository;
-import org.example.security.support.security.*;
+import org.example.security.support.security.CaptchaProperties;
+import org.example.security.support.security.DefaultFilterInvocationSecurityMetadataSource;
+import org.example.security.support.security.JwtAuthenticationFilter;
+import org.example.security.support.security.UserDetailsServiceImpl;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.access.AccessDecisionManager;
 import org.springframework.security.access.AccessDecisionVoter;
 import org.springframework.security.access.vote.AffirmativeBased;
 import org.springframework.security.access.vote.RoleVoter;
-import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 import org.springframework.security.config.annotation.ObjectPostProcessor;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
-import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.access.intercept.FilterInvocationSecurityMetadataSource;
 import org.springframework.security.web.access.intercept.FilterSecurityInterceptor;
-import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 import java.util.List;
 import java.util.Properties;
@@ -67,12 +67,12 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .csrf().disable()
-                .sessionManagement()
-                .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-                .and()
-                .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class)
+                // .sessionManagement()
+                // .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+                // .and()
+                // .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class)
                 .authorizeRequests()
-                .antMatchers("/static/*").permitAll()
+                // .antMatchers("/static/*").permitAll()
                 // .antMatchers("/api/**").hasRole(STUDENT.name())
                 // .antMatchers(HttpMethod.POST, "/management/api/**").hasAuthority(UserPermission.COURSE_WRITE.getPermission())
                 // .antMatchers(HttpMethod.PUT, "/management/api/**").hasAuthority(UserPermission.COURSE_WRITE.getPermission())
@@ -100,8 +100,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 //     out.flush();
                 //     out.close();
                 // })
-                .and()
-                .logout()
+                // .and()
+                // .logout()
                 // .addLogoutHandler(null)
                 // .logoutSuccessHandler(null)
         ;
@@ -120,12 +120,13 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        UserDetailsService userDetailsService = userDetailsService();
-        DaoAuthenticationProvider provider = new CaptchaDaoAuthenticationProvider();
-        provider.setUserDetailsService(userDetailsService);
-        provider.setPasswordEncoder(passwordEncoder);
-        provider.afterPropertiesSet();
-        auth.authenticationProvider(provider);
+        // UserDetailsService userDetailsService = userDetailsService();
+        // DaoAuthenticationProvider provider = new CaptchaDaoAuthenticationProvider();
+        // provider.setUserDetailsService(userDetailsService);
+        // provider.setPasswordEncoder(passwordEncoder);
+        // provider.afterPropertiesSet();
+        // auth.authenticationProvider(provider);
+        super.configure(auth);
     }
 
     /**
@@ -172,7 +173,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         private CaptchaProperties captchaProperties;
 
         @Bean
-        Producer verifyCode() {
+        Producer producer() {
             Properties properties = new Properties();
             properties.setProperty("kaptcha.image.width", "150");
             properties.setProperty("kaptcha.image.height", "50");

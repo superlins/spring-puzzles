@@ -19,9 +19,14 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="spring-data-jdbc" target="1.8" />
       <module name="spring-data-r2dbc" target="1.8" />
       <module name="spring-jdbc" target="1.8" />
       <module name="spring-keyclock" target="8" />
+      <module name="spring-mybatis" target="1.8" />
+      <module name="spring-quartz" target="1.8" />
+      <module name="spring-r2dbc" target="1.8" />
+      <module name="spring-testcontainers" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
