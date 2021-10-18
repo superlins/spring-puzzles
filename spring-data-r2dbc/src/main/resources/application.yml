@@ -1,8 +1,12 @@
 spring:
   r2dbc:
-    url: r2dbc:mysql://localhost:3306/employees
-    username: root
-    password: root
+#    url: r2dbc:mysql://localhost:3306/employees
+    url: r2dbc:mysql://10.50.30.166/settlement
+    username: oceanum
+    password: lygr@0907
+    pool:
+      validation-query: SELECT 1
+
 
 logging:
   level:

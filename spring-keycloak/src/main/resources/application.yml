@@ -1,0 +1,17 @@
+server:
+  port: 8081
+
+keycloak:
+  realm: myrealm
+  auth-server-url: http://localhost:8080/auth
+  resource: springboot
+  public-client: true
+#  security-constraints: # 角色资源映射关系
+#    - auth-roles:
+#        - base
+#      security-collections:
+#        - name: QUERY CUSTOMERS
+#          patterns:
+#            - '/customer'
+
+debug: true

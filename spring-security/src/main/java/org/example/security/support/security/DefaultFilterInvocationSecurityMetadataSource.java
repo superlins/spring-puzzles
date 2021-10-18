@@ -41,7 +41,7 @@ public class DefaultFilterInvocationSecurityMetadataSource
     }
 
     @Override
-    public void afterPropertiesSet() throws Exception {
+    public void afterPropertiesSet() {
         for (UserRole userRole : UserRole.values()) {
             for (UserPermission userPermission : userRole.getPermissions()) {
                 AntPathRequestMatcher matcher = new AntPathRequestMatcher(

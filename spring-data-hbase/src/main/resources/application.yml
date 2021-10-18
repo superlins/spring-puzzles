@@ -1,0 +1,15 @@
+spring:
+  data:
+    hbase:
+      port: 2181
+      quorum: optimus20a3,optimus20a2,optimus20a1
+      znode-parent: /hbase
+      root-dir: /hbase
+      auth-enabled: true
+      principal: "hbase/admin@HADOOP.COM"
+      keytab-file: "/Users/apple/Nutstore Files/My Nutstore/Resources/ws/IdeaProjects/spring-puzzles/spring-data-hbase/src/main/resources/krb5.conf"
+      properties:
+        hadoop.security.authentication: kerberos
+        hbase.security.authentication: kerberos
+        hbase.master.kerberos.principal: hbase/_HOST@HADOOP.COM
+        hbase.regionserver.kerberos.principal: hbase/_HOST@HADOOP.COM

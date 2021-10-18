@@ -49,6 +49,17 @@ class ActorDatabaseClientTest {
     }
 
     @Test
+    void insertPerson() {
+        Assertions.assertNotNull(client);
+        client.sql("insert into person values (2, 'renc', 11)")
+                .fetch()
+                .first()
+                .as(StepVerifier::create)
+                .expectNextCount(0)
+                .verifyComplete();
+    }
+
+    @Test
     void test_select() {
         client.sql("SELECT id, name FROM person")
                 .fetch()

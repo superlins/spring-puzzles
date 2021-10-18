@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: spring-actuator
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+  metrics:
+    tags:
+      application: ${spring.application.name}
+
+#logging:
+#  level:
+#    root: debug

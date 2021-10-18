@@ -1,0 +1,16 @@
+camunda:
+  bpm:
+    default-serialization-format: "application/json"
+    admin-user:
+      id: admin
+      password: admin
+spring:
+  datasource:
+    url: jdbc:h2:mem:camunda
+  h2:
+    console:
+      enabled: true
+
+#logging:
+#  level:
+#    root: debug
