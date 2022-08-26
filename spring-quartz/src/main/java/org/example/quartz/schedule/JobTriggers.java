@@ -124,31 +124,32 @@ public final class JobTriggers {
     }
 
     // Define a Trigger
-    public Trigger defineTrigger() {
+    public static Trigger defineTrigger() {
         Trigger trigger;
 
-        // trigger = newTrigger()
-        //         .withIdentity("trigger1", "group1")
-        //         // .startNow()
-        //         // .withSchedule(calendarIntervalSchedule()
-        //         //         .withIntervalInMinutes(60))
-        //         .withSchedule(simpleSchedule().withIntervalInMinutes(60).repeatForever())
-        //         .build();
-
         trigger = newTrigger()
-                .withIdentity("trigger", "group")
-                .withSchedule(CronScheduleBuilder.cronSchedule("0/10 * 8-17 26-5 8-9 ? 2021"))
+                .withIdentity("trigger1", "group1")
+                .startNow()
+                // .withSchedule(calendarIntervalSchedule()
+                //         .withIntervalInMinutes(60))
+                .withSchedule(simpleSchedule().withIntervalInSeconds(10).repeatForever())
                 .build();
+
+        // trigger = newTrigger()
+        //         .withIdentity("trigger", "group")
+        //         .withSchedule(CronScheduleBuilder.cronSchedule("0/10 * 8-17 26-5 8-9 ? 2021"))
+        //         .build();
 
         return trigger;
     }
 
     // Define a JobDetail
-    public JobDetail defineJob() {
+    public static JobDetail defineJob() {
         return newJob(QuartzJob.class)
                 .withIdentity("job1", "group1")
                 .usingJobData("string-key", "someValue")
                 .usingJobData("long-key", 1000L)
+                .usingJobData("name", "test-name")
                 .build();
     }
 }

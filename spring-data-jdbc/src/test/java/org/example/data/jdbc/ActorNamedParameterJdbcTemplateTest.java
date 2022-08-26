@@ -30,7 +30,7 @@ public class ActorNamedParameterJdbcTemplateTest {
     @Test
     void countOfActorsByFirstName() {
         String sql = "select count(*) from t_actor where first_name = :first_name";
-        SqlParameterSource namedParameters = new MapSqlParameterSource("first_name", "Yurij");
+        SqlParameterSource namedParameters = new MapSqlParameterSource("first_name", "sange");
         int count = this.namedParameterJdbcTemplate.queryForObject(sql, namedParameters, Integer.class);
         assertTrue(count > 0);
     }
@@ -38,7 +38,7 @@ public class ActorNamedParameterJdbcTemplateTest {
     @Test
     void countOfActorsByFirstNameWithMap() {
 
-        String sql = "select count(*) from T_ACTOR where first_name = :first_name";
+        String sql = "select count(*) from t_actor where first_name = :first_name";
 
         Map<String, String> namedParameters = Collections.singletonMap("first_name", "Yurij");
         int count = this.namedParameterJdbcTemplate.queryForObject(sql, namedParameters, Integer.class);

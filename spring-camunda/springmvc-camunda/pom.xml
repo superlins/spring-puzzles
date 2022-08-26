@@ -25,18 +25,35 @@
         <dependency>
             <groupId>org.camunda.bpm.springboot</groupId>
             <artifactId>camunda-bpm-spring-boot-starter-rest</artifactId>
+            <exclusions>
+                <exclusion>
+                    <artifactId>camunda-connect-connectors-all</artifactId>
+                    <groupId>org.camunda.connect</groupId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
+        <!-- connector -->
+        <dependency>
+            <groupId>org.camunda.connect</groupId>
+            <artifactId>camunda-connect-http-client</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.camunda.bpm</groupId>
+            <artifactId>camunda-engine-plugin-connect</artifactId>
+        </dependency>
+
+        <!-- spin -->
         <dependency>
             <groupId>org.camunda.bpm</groupId>
             <artifactId>camunda-engine-plugin-spin</artifactId>
         </dependency>
-
         <dependency>
             <groupId>org.camunda.spin</groupId>
             <artifactId>camunda-spin-dataformat-all</artifactId>
         </dependency>
 
+        <!-- groovy -->
         <dependency>
             <groupId>org.codehaus.groovy</groupId>
             <artifactId>groovy-jsr223</artifactId>
@@ -67,6 +84,11 @@
             <groupId>org.camunda.bpm.springboot</groupId>
             <artifactId>camunda-bpm-spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.camunda.bpm.dmn</groupId>
+            <artifactId>camunda-engine-dmn</artifactId>
         </dependency>
     </dependencies>
 </project>

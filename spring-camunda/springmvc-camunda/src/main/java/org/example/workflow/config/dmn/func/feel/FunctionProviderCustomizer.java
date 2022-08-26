@@ -16,16 +16,22 @@ import java.util.Optional;
 @Component
 public class FunctionProviderCustomizer implements FeelCustomFunctionProvider {
 
-    private final Map<String, CustomFunction> functions = new HashMap<>();
+    private static final Map<String, CustomFunction> functions = new HashMap<>();
 
-    public FunctionProviderCustomizer() {
+    static {
+        functions.put("decr", CustomFunction.create()
+                .setParams("v")
+                .setFunction(args -> {
+                    long v = (long) args.get(0);
+                    return v - 1;
+                }).build());
+
         functions.put("datetime", CustomFunction.create()
                 .setParams("v")
                 .setFunction(args -> {
                     String val = (String) args.get(0);
                     return DateTimeFormatter.ISO_LOCAL_DATE_TIME.parse(val);
-                })
-                .build());
+                }).build());
     }
 
     @Override

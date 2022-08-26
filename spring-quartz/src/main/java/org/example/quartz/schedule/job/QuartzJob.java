@@ -1,5 +1,6 @@
 package org.example.quartz.schedule.job;
 
+import org.example.quartz.service.MyService;
 import org.quartz.*;
 import org.springframework.scheduling.quartz.QuartzJobBean;
 
@@ -7,6 +8,18 @@ import org.springframework.scheduling.quartz.QuartzJobBean;
  * @author renc
  */
 public class QuartzJob extends QuartzJobBean {
+
+    private MyService myService;
+
+    private String name;
+
+    public void setMyService(MyService myService) {
+        this.myService = myService;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 
     @Override
     protected void executeInternal(JobExecutionContext context) throws JobExecutionException {

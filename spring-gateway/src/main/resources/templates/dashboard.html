@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Dashboard</title>
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+    <script th:src="@{/js/jquery.min.js}"></script>
+    <script th:src="@{/js/bootstrap.min.js}"></script>
+</head>
+
+<div class="container" style="margin-top: 50px">
+    <div class="row row-cols-1 row-cols-md-1 g-4">
+        <div class="col">
+            <div class="card">
+                <h5 class="card-header">Routes</h5>
+                <div class="card-body">
+                    <table id="routes" class="table table-striped">
+                        <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>URI</th>
+                            <th>ORDER</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr class="" data-th-each="route : ${routes}">
+                            <td>[[${route.route_id}]]</td>
+                            <td>[[${route.uri}]]</td>
+                            <td>[[${route.order}]]</td>
+                            <td>
+                                <button type="button" th:attr="routeId=${route.route_id}" class="viewRouteBtn btn btn-info btn-sm">View</button>
+                                <button type="button" th:attr="routeId=${route.route_id}" class="delRouteBtn btn btn-danger btn-sm">Delete</button>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <button type="button" class="refreshBtn btn btn-secondary btn-sm float-end" style="margin-top: 10px">Refresh</button>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <h5 class="card-header">Add Route</h5>
+                <div class="card-body">
+                    <form id="addRoute">
+                        <div class="form-group">
+                            <textarea class="form-control" id="route" placeholder="input your route body.."></textarea>
+                        </div>
+                        <button id="addRouteBtn" type="submit" class="btn btn-secondary btn-sm float-end" style="margin-top: 10px">Add</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" th:inline="javascript">
+    $('#addRouteBtn').on('click', function () {
+        let route = $('#route').val();
+        if (route == '') {
+            alert("The route body can not be null!")
+            return;
+        }
+        $.ajax({
+            url: "/actuator/gateway/routes/" + JSON.parse(route).id,
+            type: 'post',
+            async: false,
+            contentType: "application/json",
+            data: route,
+            success: function (arg) {
+                alert("Success！")
+            },
+        });
+    });
+    $('.viewRouteBtn').on('click', function () {
+        $.ajax({
+            url: "/actuator/gateway/routes/" + $(this).attr('routeId'),
+            type: 'get',
+            success: function (data) {
+                alert(JSON.stringify(data, null, 2));
+            },
+        });
+    });
+    $('.delRouteBtn').on('click', function () {
+        let delBtn = confirm('This action will delete current route! Are you sure?');
+        if(delBtn){
+            $.ajax({
+                url: "/actuator/gateway/routes/" + $(this).attr('routeId'),
+                type: 'delete',
+                success: function () {
+                    alert("Success！")
+                },
+            });
+        }
+    });
+    $('.refreshBtn').on('click', function () {
+        $.ajax({
+            url: "/actuator/gateway/refresh",
+            type: 'post',
+            success: function () {
+                alert("Success！")
+            },
+        });
+    });
+</script>
+</html>

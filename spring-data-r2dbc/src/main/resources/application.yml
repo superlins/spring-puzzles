@@ -1,7 +1,6 @@
 spring:
   r2dbc:
-#    url: r2dbc:mysql://localhost:3306/employees
-    url: r2dbc:mysql://10.50.30.166/settlement
+    url: r2dbc:mysql://10.50.30.166/o_gateway
     username: oceanum
     password: lygr@0907
     pool:

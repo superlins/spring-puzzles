@@ -3,9 +3,12 @@ package org.example.workflow.listener;
 import org.camunda.bpm.dmn.engine.delegate.DmnDecisionEvaluationListener;
 import org.camunda.bpm.dmn.engine.delegate.DmnDecisionTableEvaluationEvent;
 import org.camunda.bpm.dmn.engine.delegate.DmnDecisionTableEvaluationListener;
+import org.camunda.bpm.dmn.engine.delegate.DmnEvaluatedDecisionRule;
 import org.camunda.bpm.dmn.engine.impl.DefaultDmnDecisionContext;
 import org.camunda.bpm.dmn.engine.impl.evaluation.DecisionTableEvaluationHandler;
 import org.springframework.stereotype.Component;
+
+import java.util.List;
 
 /**
  * @author renc
@@ -19,6 +22,7 @@ public class DecisionEvaluationListener implements DmnDecisionTableEvaluationLis
 
     @Override
     public void notify(DmnDecisionTableEvaluationEvent evaluationEvent) {
-        System.out.println(evaluationEvent);
+        List<DmnEvaluatedDecisionRule> matchingRules = evaluationEvent.getMatchingRules();
+        System.out.println(">>>>>> matching rules: " + matchingRules);
     }
 }

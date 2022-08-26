@@ -47,14 +47,17 @@ class ActorJdbcTemplateTest {
     @Test
     void test_resultSet_queryForObject() {
         Actor actor = jdbcTemplate.queryForObject(
-                "select first_name, last_name from t_actor where id = ?",
+                "select * from t_actor where id = ?",
                 (resultSet, rowNum) -> {
                     Actor newActor = new Actor();
                     newActor.setFirstName(resultSet.getString("first_name"));
                     newActor.setLastName(resultSet.getString("last_name"));
+                    String detail = resultSet.getString("detail");
+
+                    newActor.setDetail(null); // TODO(renc):
                     return newActor;
                 },
-                1212L);
+                2);
         assertNotNull(actor);
     }
 

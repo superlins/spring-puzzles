@@ -1,0 +1,159 @@
+M-AC-OCM-01-zdxd
+智度小贷信用风险评分
+score_h,score_x,score_y,score_xy
+M-AC-OCM-01-msxj
+马上消金贷前信用风险评分
+ms_score_a,ms_score_b
+M-AC-OCM-01-gmxd
+国美贷前信用评分
+lgb_gm_a
+M-AC-OCM-01-ddjr
+滴滴贷前信用风险评分
+xgb_dd
+M-AC-OCM-01-zjcj
+字节贷前信用风险评分
+xgb_bd
+M-AC-OCM-01-bjxd
+360(北京小贷)贷前/贷中信用风险评分
+xgb_360_a,xgb_360_b
+M-AC-OCM-01-yzf
+翼支付贷前信用评分
+lgb_yzf_a
+M-AC-OCM-01-hpjk
+恒普信用评分
+xgb_hp_a,xgb_hp_b
+M-AC-OCM-01-hcc
+捷信贷前信用评分
+xgb_hcc_a,xgb_hcc_b
+M-AC-OCM-01-ddml
+滴滴贷中信用评分
+xgb_dd_s,xgb_dd_l
+M-AC-OCM-01-ldxd
+绿地贷前信用评分
+lgb_ld_a,lgb_ld_b,lgb_ld_c
+M-AC-OCM-01-xwyh
+新网贷前信用评分
+lgb_xw_a,lgb_xw_b
+M-AC-OCM-01-jdkj
+京东科技信用评分
+xgb_jd_a,xgb_jd_b,xgb_jd_c,xgb_jd_d,lr_jd_e,lr_jd_f
+M-AC-OCM-01-dxm3
+度小满信用评分
+xgb_dxm_a,xgb_dxm_b,lr_dxm_c,lr_dxm_d,lr_dxm_e,lr_dxm_f,lr_dxm_g,lr_dxm_h,lr_dxm_i,lr_dxm_j
+M-AC-OCM-01-dxm4
+度小满信用评分
+lr_dxm_k,lr_dxm_l,lr_dxm_m,lr_dxm_n,lr_dxm_o,xgb_dxm_p,xgb_dxm_q,lr_dxm_r,lr_dxm_s,lr_dxm_t
+M-AC-OCM-01-xcjr
+携程金融消金分
+xgb_xc_a,lr_xc_b
+M-AC-OCM-01-zyxj
+中原消金信用评分
+lgb_zyxj_a,lgb_zyxj_b
+M-AC-OCM-01-xykj
+信也科技信用评分 A
+lgb_xykj_a
+M-AC-OCM-01-zjcj2
+字节财经信用评分 A
+xgb_zjcj_a
+M-AC-OCM-01-yxjr
+宜信信用评分 A
+xgb_yxjr_a
+M-AC-OCM-01-zyxj2
+中原消金信用评分 C,D
+lgb_zyxj_c,lgb_zyxj_d
+M-AC-OCM-01-wzyh
+微众银行信用评分 A,B,C
+xgb_wzyh_a,xgb_wzyh_b,xgb_wzyh_c
+M-AC-OCM-01-mtjr_lr
+美团1期评分 A
+lr_mtjr_a
+M-AC-OCM-01-jcyh_lr
+金城银行评分A
+lr_jcyh_a
+M-AC-OCM-01-ddjr3
+滴滴金融评分 D
+xgb_ddjr_d
+M-AC-OCM-01-zjcj3
+字节财经信用评分B
+lgb_zjcj_b
+M-AC-OCM-01-xmjr
+小米金融信用评分E,小米金融收入评分F
+xgb_xmjr_e,xgb_xmjr_f
+M-AC-OCM-01-xmjr_lr
+小米金融信用评分 A,B,C,D
+lr_xmjr_a,lr_xmjr_b,lr_xmjr_c,lr_xmjr_d
+M-AC-OCM-01-mtjr2
+美团金融 2 期评分 B,C
+xgb_mtjr_b,xgb_mtjr_c
+M-AC-OCM-01-mtjr3_lr
+美团金融 3 期评分 D
+xgb_mtjr_d
+M-AC-OCM-01-zyxj3
+中原消金 3 期评分 E
+lgb_zyxj_e
+M-AC-OCM-01-zyxj4
+中原消金 4 期评分 F
+lgb_zyxj_f
+M-AC-OCM-01-bxyh1
+百信银行 1 期评分 A
+lgb_bxyh_a
+M-AC-OCM-01-bxyh_lr
+百信银行 1 期评分 B
+lr_bxyh_b
+M-AC-OCM-01-shnsh
+上海农商行 1 期评分 A
+xgb_shnsh_a
+M-AC-OCM-01-xykj2
+信也科技 2 期评分 B
+lgb_xykj_b
+M-AC-OCM-01-hkxd
+黑卡小贷 1 期评分 A
+xgb_hkxd_a
+M-AC-OCM-01-hkxd_lr
+黑卡小贷 1 期评分 B
+lr_hkxd_b
+M-AC-OCM-01-wzyh2_lr
+微众银行 2 期评分 D,E
+lr_wzyh_d,lr_wzyh_e
+M-AC-OCM-01-lxjr
+乐信 1 期评分 A
+lgb_lx_a
+M-AC-OCM-01-xyxj_lr
+兴业消金 1 期评分 A
+lr_xyxj_a
+M-AC-OCM-01-xlxd
+新浪小贷 1 期评分 A ,B
+lgb_xlxd_a,lgb_xlxd_b
+M-AC-OCM-01-xlxd_lr
+新浪小贷 1 期评分 C
+lr_xlxd_c
+M-AC-OCM-01-360bj
+360北京二期
+xgb_360_e
+M-AC-OCM-01-ddjr4
+滴滴金融4期
+xgb_ddjr_e
+M-AC-OCM-01-xmjr_g
+小米金融二期
+xgb_xmjr_g
+M-AC-OCM-01-liehu
+猎户分
+lgb_liehu_a
+M-AC-OCM-01-qilin_b
+自研评分 - 麒麟分B
+lgb_qilin_b
+M-AC-OCM-01-alibb_lgb
+阿里巴巴1期
+lgb_albb_a
+M-AC-OCM-01-lr_wzyh_f
+微众银行F分
+lr_wzyh_f
+M-AC-OCM-01-360bj_fg
+360北京F，G 分
+xgb_360_f，xgb_360_g
+M-AC-OCM-01-ylsj
+银联数据 A ，B 分
+lr_ylsj_a,lr_ylsj_b
+M-AC-OCM-01-ddjr_f
+滴滴金融F分
+xgb_ddjr_f

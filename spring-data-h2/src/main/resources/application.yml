@@ -1,0 +1,9 @@
+spring:
+  r2dbc:
+    url: r2dbc:h2:mem:///testdb
+    username: sa
+    password:
+  sql:
+    init:
+      schema-locations: classpath:sql/schema.sql
+debug: true

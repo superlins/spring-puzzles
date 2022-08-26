@@ -1,0 +1,7 @@
+server:
+  port: 9999
+spring:
+  data:
+    mongodb:
+#      uri: mongodb://admin:admin_180907@172.16.250.11:29000,172.16.250.13:29000,172.16.250.15:29000/tools?authSource=admin
+      uri: mongodb://admin:admin_180907@10.50.20.6:29000/tools?authSource=admin

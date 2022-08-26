@@ -1,0 +1,2 @@
+#org.camunda.spin.spi.DataFormatConfigurator=\
+#  org.example.workflow.config.plugin.CamundaJsonPathFormatConfiguration

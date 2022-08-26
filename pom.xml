@@ -14,7 +14,6 @@
         <module>spring-data-r2dbc</module>
         <module>spring-mybatis</module>
         <module>spring-testcontainers</module>
-        <module>spring-keycloak</module>
         <module>spring-security</module>
         <module>spring-es</module>
         <module>spring-quartz</module>
@@ -26,6 +25,13 @@
         <module>spring-mapstruct</module>
         <module>spring-websocket</module>
         <module>spring-camunda</module>
+        <module>spring-mvc</module>
+        <module>spring-jooq</module>
+        <module>spring-ftp</module>
+        <module>spring-gateway</module>
+        <module>spring-data-mongo</module>
+        <module>spring-data-h2</module>
+        <module>spring-container</module>
     </modules>
 
     <properties>

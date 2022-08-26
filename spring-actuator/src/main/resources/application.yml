@@ -1,6 +1,22 @@
 spring:
+  codec:
+    max-in-memory-size: 10MB
+  webflux:
+    base-path: /ac
   application:
     name: spring-actuator
+
+eureka:
+  instance:
+    lease-renewal-interval-in-seconds: 4
+    lease-expiration-duration-in-seconds: 12
+    prefer-ip-address: true
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    registry-fetch-interval-seconds: 8
+    service-url:
+      defaultZone: http://10.50.30.191:8761/eureka/,http://10.50.30.192:8761/eureka/,http://10.50.30.193:8761/eureka/,http://10.50.30.194:8761/eureka/,http://10.50.30.195:8761/eureka/
 
 management:
   endpoints:

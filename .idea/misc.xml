@@ -5,8 +5,35 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-camunda/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-camunda/camunda-external-task/pom.xml" />
         <option value="$PROJECT_DIR$/spring-camunda/springmvc-camunda/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-gateway/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/spring-actuator/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-audit/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-batch/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-container/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-data-h2/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-data-hbase/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-data-jdbc/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-data-mongo/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-data-r2dbc/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-es/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-ftp/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-jersey/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-jooq/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-mapstruct/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-mvc/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-mybatis/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-quartz/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-security/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-testcontainers/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-websocket/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">

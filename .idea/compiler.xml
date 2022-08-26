@@ -7,40 +7,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="spring-testcontainers" />
-        <module name="spring-data-jdbc" />
-        <module name="spring-audit" />
-        <module name="spring-actuator" />
-        <module name="spring-keycloak" />
-        <module name="spring-quartz" />
-        <module name="spring-data-hbase" />
-        <module name="spring-mybatis" />
-        <module name="spring-data-r2dbc" />
         <module name="camunda-external-task" />
-        <module name="spring-security" />
-        <module name="spring-jersey" />
         <module name="springmvc-camunda" />
-        <module name="spring-batch" />
-        <module name="spring-es" />
-        <module name="spring-websocket" />
-      </profile>
-      <profile name="Annotation profile for spring-puzzles" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="false">
-          <entry name="$MAVEN_REPOSITORY$/org/mapstruct/mapstruct-processor/1.4.2.Final/mapstruct-processor-1.4.2.Final.jar" />
-          <entry name="$MAVEN_REPOSITORY$/org/mapstruct/mapstruct/1.4.2.Final/mapstruct-1.4.2.Final.jar" />
-          <entry name="$MAVEN_REPOSITORY$/org/mapstruct/extensions/spring/mapstruct-spring-extensions/0.1.0/mapstruct-spring-extensions-0.1.0.jar" />
-          <entry name="$MAVEN_REPOSITORY$/org/mapstruct/extensions/spring/mapstruct-spring-annotations/0.1.0/mapstruct-spring-annotations-0.1.0.jar" />
-          <entry name="$MAVEN_REPOSITORY$/org/springframework/spring-core/5.0.0.RELEASE/spring-core-5.0.0.RELEASE.jar" />
-          <entry name="$MAVEN_REPOSITORY$/org/springframework/spring-jcl/5.0.0.RELEASE/spring-jcl-5.0.0.RELEASE.jar" />
-          <entry name="$MAVEN_REPOSITORY$/com/squareup/javapoet/1.13.0/javapoet-1.13.0.jar" />
-          <entry name="$MAVEN_REPOSITORY$/org/apache/commons/commons-lang3/3.12.0/commons-lang3-3.12.0.jar" />
-          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.20/lombok-1.18.20.jar" />
-          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok-mapstruct-binding/0.2.0/lombok-mapstruct-binding-0.2.0.jar" />
-        </processorPath>
-        <module name="spring-mapstruct" />
+        <module name="spring-gateway" />
       </profile>
     </annotationProcessing>
   </component>
