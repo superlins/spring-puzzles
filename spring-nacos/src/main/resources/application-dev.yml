@@ -1,0 +1,7 @@
+user.test: application-dev.yml
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

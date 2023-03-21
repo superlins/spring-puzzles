@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
-    <file url="file://$PROJECT_DIR$/spring-actuator/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/spring-actuator/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/spring-audit/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/spring-audit/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-batch/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-batch/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-camunda/camunda-external-task/src/main/java" charset="UTF-8" />
@@ -13,18 +9,14 @@
     <file url="file://$PROJECT_DIR$/spring-camunda/springmvc-camunda/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-camunda/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-camunda/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-data-es/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-data-es/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-data-hbase/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-data-hbase/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/spring-data-jdbc/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/spring-data-jdbc/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-data-r2dbc/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-data-r2dbc/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/spring-es/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/spring-es/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-ftp/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-ftp/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/spring-gateway/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/spring-gateway/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-jersey/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-jersey/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-jooq/src/main/java" charset="UTF-8" />
@@ -33,10 +25,10 @@
     <file url="file://$PROJECT_DIR$/spring-keycloak/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-mapstruct/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-mapstruct/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/spring-mvc/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/spring-mvc/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-mybatis/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-mybatis/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-nacos/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-nacos/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-quartz/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-quartz/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-security/src/main/java" charset="UTF-8" />

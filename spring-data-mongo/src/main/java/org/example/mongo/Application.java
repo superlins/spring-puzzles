@@ -1,14 +1,13 @@
 package org.example.mongo;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.data.mongodb.core.ReactiveMongoTemplate;
+import org.springframework.data.mongodb.core.query.Criteria;
+import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.client.WebClient;
-import reactor.core.publisher.Flux;
 
 import java.io.BufferedWriter;
 import java.io.Closeable;
@@ -16,9 +15,11 @@ import java.io.IOException;
 import java.io.UncheckedIOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.nio.file.StandardOpenOption;
-import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.function.Supplier;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 /**
  * @author renc
@@ -44,6 +45,21 @@ public class Application {
 
         @Override
         public void run(String... args) throws Exception {
+
+            Stream<String> stream = Files.lines(Paths.get("src/main/resources/md5.txt"));
+            Supplier<Stream<String>> supplier = () -> stream;
+
+            int steps = (int) Math.ceil(supplier.get().count() / Double.valueOf(1000));
+
+            Stream.iterate(0, n -> n + 1).limit(steps)
+                    .parallel()
+                    .forEach(step -> {
+                        List<String> md5ids = supplier.get().skip(step * 1000).limit(1000)
+                                .collect(Collectors.toList());
+                        Query q = Query.query(Criteria.where("md5").in(md5ids));
+                        reactiveMongoTemplate.find(q, Map.class, "sha256_md5").subscribe();
+                    });
+
             // Path path = Paths.get("/Users/renc/iCoder/IdeaProjects/spring-puzzles/spring-data-mongo/src/main/resources/md5.txt");
             // BufferedWriter bw = Files.newBufferedWriter(path, StandardOpenOption.CREATE, StandardOpenOption.APPEND);
             // Flux.fromStream(Files.lines(Paths.get("/Users/renc/iCoder/IdeaProjects/spring-puzzles/spring-data-mongo/src/main/resources/hkxd.csv")))
@@ -70,18 +86,18 @@ public class Application {
             //                     .bodyToMono(String.class);
             //         }).subscribe(m -> write(bw, m), e -> close(bw), () -> close(bw));
 
-            ObjectMapper om = new ObjectMapper();
-            BufferedWriter bw = Files.newBufferedWriter(Paths.get("/Users/renc/iCoder/IdeaProjects/spring-puzzles/spring-data-mongo/src/main/resources/res-final.csv"), StandardOpenOption.CREATE, StandardOpenOption.APPEND);
-            Flux.fromStream(Files.lines(Paths.get("/Users/renc/iCoder/IdeaProjects/spring-puzzles/spring-data-mongo/src/main/resources/res.csv")))
-                    .map(s -> {
-                        try {
-                            return om.readValue(s, Map.class);
-                        } catch (JsonProcessingException e) {
-                            e.printStackTrace();
-                        }
-                        return new HashMap();
-                    }).map(m -> m.get("phone") + "," + m.get("lr_hkxd_b"))
-                    .subscribe(m -> write(bw, m), e -> close(bw), () -> close(bw));
+            // ObjectMapper om = new ObjectMapper();
+            // BufferedWriter bw = Files.newBufferedWriter(Paths.get("/Users/renc/iCoder/IdeaProjects/spring-puzzles/spring-data-mongo/src/main/resources/res-final.csv"), StandardOpenOption.CREATE, StandardOpenOption.APPEND);
+            // Flux.fromStream(Files.lines(Paths.get("/Users/renc/iCoder/IdeaProjects/spring-puzzles/spring-data-mongo/src/main/resources/res.csv")))
+            //         .map(s -> {
+            //             try {
+            //                 return om.readValue(s, Map.class);
+            //             } catch (JsonProcessingException e) {
+            //                 e.printStackTrace();
+            //             }
+            //             return new HashMap();
+            //         }).map(m -> m.get("phone") + "," + m.get("lr_hkxd_b"))
+            //         .subscribe(m -> write(bw, m), e -> close(bw), () -> close(bw));
         }
     }
 

@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-access="field">
+    <class name="org.example.ddd.domain.model.task.Task" table="T_RE_TASK">
+
+        <id name="id" type="long" column="ID">
+            <generator class="identity"/>
+        </id>
+
+        <component name="taskId" unique="true">
+            <property name="name" type="string" column="NAME"/>
+            <property name="creator" type="string" column="CREATOR"/>
+        </component>
+
+        <component name="datasetId">
+            <property name="id" type="string" column="DATASET" not-null="true"/>
+        </component>
+
+        <property name="priority" type="int" column="PRIORITY" not-null="true"/>
+
+        <property name="taskState" column="STATE" not-null="true">
+            <type name="org.hibernate.type.EnumType">
+                <param name="enumClass">org.example.ddd.domain.model.task.TaskState</param>
+                <param name="type">-6</param> <!-- java.sql.Types.TINYINT -->
+            </type>
+        </property>
+
+        <component name="taskRuntime">
+            <property name="beginTime" type="timestamp" column="BEGIN_TIME"/>
+            <property name="endTime" type="timestamp" column="END_TIME"/>
+        </component>
+
+        <component name="tbSpace">
+            <property name="name" type="string" column="TB_SPACE_NAME"/>
+            <property name="count" type="long" column="TB_SPACE_COUNT"/>
+        </component>
+
+        <component name="locker">
+            <property name="name" column="LOCKER"/>
+        </component>
+
+        <property name="createdAt" type="java.time.LocalDateTime" column="CREATED_AT" generated="insert" not-null="true"/>
+
+    </class>
+</hibernate-mapping>

@@ -1,25 +1,11 @@
 server:
-  error:
-    include-message: always
   port: 9898
 
-management:
-  endpoints:
-    web:
-      exposure:
-        include: '*'
-
-debug: true
+#debug: true
 
 spring:
   application:
     name: spring-gateway
-  thymeleaf:
-    cache: false
-#  r2dbc:
-#    url: r2dbc:mysql://10.50.30.166/o_gateway
-#    username: oceanum
-#    password: lygr@0907
   cloud:
     gateway:
       metrics:
@@ -27,29 +13,18 @@ spring:
       httpclient:
         connect-timeout: 1000
         response-timeout: 60s
-      routes:
-        - id: TEST-SERVICE
-          uri: http://10.50.30.176
-          predicates:
-            - Path=/**
-#            - Header=X-Extension-ID, ICBC
+#      routes:
+#        - id: TEST-SERVICE
+#          uri: http://example.org
+#          predicates:
+#            - Path=/**
 #          filters:
-#            - SendTraceMessage
-#            - RewriteBody
+#            - Logging
 #            - name: Retry
 #              args:
 #                retries: 3
 #                statuses: INTERNAL_SERVER_ERROR,BAD_GATEWAY,SERVICE_UNAVAILABLE,GATEWAY_TIMEOUT
 #                methods: GET,POST
-#            - name: GMExchange
-#              args:
-#                consumers:
-#                  - id: _SELF
-#                    pbk: 04c91cecc08c589377c14d37f3ca24d129b3fa385fda82157b7930a058458a8ea512de07169d686b06b3036d831b855fe7a53cc8a5913a8721d1528fa784043004
-#                    pvk: 33d23cb59b78e25e82d555c5637d2ae24151e8222e274af118c9970123db11b5
-#                  - id: ICBC-BIZ-NO
-#                    pbk: 045ea405420df048eb4bd569044cf57305140d0037aefa18781f48d2b138d3fa8247b9e608b4f25f9fec29647d4af880f81cfb1c64b41b874796929f4db493c339
-#                    pvk: 8bc32676a4c19b0045bfecb3a4b4fe5abb8095c78cd06aef0392b3e8a8fa2d31
 
 #eureka:
 #  instance:

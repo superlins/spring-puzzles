@@ -10,17 +10,13 @@
     <version>1.0.0</version>
 
     <modules>
-        <module>spring-data-jdbc</module>
-        <module>spring-data-r2dbc</module>
         <module>spring-mybatis</module>
         <module>spring-testcontainers</module>
         <module>spring-security</module>
-        <module>spring-es</module>
         <module>spring-quartz</module>
         <module>spring-batch</module>
         <module>spring-audit</module>
         <module>spring-jersey</module>
-        <module>spring-data-hbase</module>
         <module>spring-actuator</module>
         <module>spring-mapstruct</module>
         <module>spring-websocket</module>
@@ -28,17 +24,29 @@
         <module>spring-mvc</module>
         <module>spring-jooq</module>
         <module>spring-ftp</module>
+        <module>spring-sftp</module>
         <module>spring-gateway</module>
+        <module>spring-data-hbase</module>
+        <module>spring-data-es</module>
+        <module>spring-data-jdbc</module>
+        <module>spring-data-r2dbc</module>
         <module>spring-data-mongo</module>
         <module>spring-data-h2</module>
-        <module>spring-container</module>
+        <module>spring-keycloak</module>
+        <module>spring-data-jpa</module>
+        <module>spring-ddd</module>
+        <module>spring-axon</module>
+        <module>spring-nacos</module>
+        <module>spring-webflux</module>
     </modules>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
-        <spring-boot.version>2.5.0</spring-boot.version>
-        <spring-cloud.version>2020.0.3</spring-cloud.version>
+        <spring-boot.version>2.6.11</spring-boot.version>
+        <spring-cloud.version>2021.0.4</spring-cloud.version>
+        <axon.version>4.6.2</axon.version>
+        <spring-cloud.alibaba.version>2021.0.4.0</spring-cloud.alibaba.version>
     </properties>
 
     <dependencyManagement>
@@ -57,6 +65,31 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+            <dependency>
+                <groupId>org.axonframework</groupId>
+                <artifactId>axon-bom</artifactId>
+                <version>${axon.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>${spring-cloud.alibaba.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
         </dependencies>
     </dependencyManagement>
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-maven-plugin</artifactId>
+                    <version>2.6.11</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
 </project>

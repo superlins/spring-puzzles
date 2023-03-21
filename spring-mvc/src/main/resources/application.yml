@@ -1,2 +1,16 @@
 server:
   port: 6666
+
+spring:
+  application:
+    name: test-service
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://10.50.30.191:8761/eureka/,http://10.50.30.192:8761/eureka/,http://10.50.30.193:8761/eureka/,http://10.50.30.194:8761/eureka/,http://10.50.30.195:8761/eureka/
+

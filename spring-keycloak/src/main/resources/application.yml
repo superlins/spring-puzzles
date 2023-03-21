@@ -1,0 +1,46 @@
+server:
+  port: 7777
+  max-http-header-size: 1MB
+  servlet:
+    encoding:
+      charset: utf-8
+      force: true
+    context-path: /spring
+
+keycloak:
+  enabled: true
+  realm: mine
+  auth-server-url: https://keycloak.oceanum.local
+  resource: spring
+  use-resource-role-mappings: true
+  credentials:
+    secret: TIzoEfh1D30jo7vE57n01Nxe6HN9oQeK
+#  bearer-only: true
+#  cors: true
+#  policy-enforcer-config:
+#    enforcementMode: ENFORCING # PERMISSIVE
+#    lazy-load-paths: true
+#    paths:
+#      - name: anonymous
+#        path: '/anonymous/*'
+#        enforcementMode: DISABLED
+  disable-trust-manager: true
+  security-constraints:
+    - authRoles: '*'
+      security-collections:
+        - name: protected
+          patterns: '/*'
+    - security-collections:
+        - name: anonymous
+          patterns: '/anonymous/*'
+
+#spring:
+#  jackson:
+#    serialization:
+#      WRITE_SINGLE_ELEM_ARRAYS_UNWRAPPED: true
+#    deserialization:
+#      ACCEPT_SINGLE_VALUE_AS_ARRAY: true
+
+#logging:
+#  level:
+#    org.keycloak: debug

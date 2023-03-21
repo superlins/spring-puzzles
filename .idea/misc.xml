@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ExcludeFromValidation">
+    <file url="file://$PROJECT_DIR$/spring-webflux/src/main/java/org/example/webflux/controller/ApiController.java" />
+  </component>
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/spring-camunda/pom.xml" />
-        <option value="$PROJECT_DIR$/spring-camunda/camunda-external-task/pom.xml" />
-        <option value="$PROJECT_DIR$/spring-camunda/springmvc-camunda/pom.xml" />
-        <option value="$PROJECT_DIR$/spring-gateway/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-nacos/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-keycloak/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
@@ -16,14 +18,21 @@
         <option value="$PROJECT_DIR$/spring-actuator/pom.xml" />
         <option value="$PROJECT_DIR$/spring-audit/pom.xml" />
         <option value="$PROJECT_DIR$/spring-batch/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-camunda/camunda-external-task/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-camunda/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-camunda/springmvc-camunda/pom.xml" />
         <option value="$PROJECT_DIR$/spring-container/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-data-es/pom.xml" />
         <option value="$PROJECT_DIR$/spring-data-h2/pom.xml" />
         <option value="$PROJECT_DIR$/spring-data-hbase/pom.xml" />
         <option value="$PROJECT_DIR$/spring-data-jdbc/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-data-jpa/pom.xml" />
         <option value="$PROJECT_DIR$/spring-data-mongo/pom.xml" />
         <option value="$PROJECT_DIR$/spring-data-r2dbc/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-ddd/pom.xml" />
         <option value="$PROJECT_DIR$/spring-es/pom.xml" />
         <option value="$PROJECT_DIR$/spring-ftp/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-gateway/pom.xml" />
         <option value="$PROJECT_DIR$/spring-jersey/pom.xml" />
         <option value="$PROJECT_DIR$/spring-jooq/pom.xml" />
         <option value="$PROJECT_DIR$/spring-mapstruct/pom.xml" />
@@ -31,6 +40,10 @@
         <option value="$PROJECT_DIR$/spring-mybatis/pom.xml" />
         <option value="$PROJECT_DIR$/spring-quartz/pom.xml" />
         <option value="$PROJECT_DIR$/spring-security/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-sftp/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-sftp/sftp-client/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-sftp/sftp-controller/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-sftp/sftp-server/pom.xml" />
         <option value="$PROJECT_DIR$/spring-testcontainers/pom.xml" />
         <option value="$PROJECT_DIR$/spring-websocket/pom.xml" />
       </set>

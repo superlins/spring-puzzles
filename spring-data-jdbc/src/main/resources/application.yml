@@ -2,4 +2,11 @@ spring:
   datasource:
     username: oceanum
     password: lygr@0907
-    url: jdbc:mysql://10.50.30.166:3306/ocp_data_exchange
+    url: jdbc:mysql://10.50.30.166:3306/test
+logging:
+  level:
+    root: debug
+server:
+  servlet:
+    encoding:
+      force: true

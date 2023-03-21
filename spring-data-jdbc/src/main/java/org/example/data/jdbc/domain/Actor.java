@@ -3,7 +3,7 @@ package org.example.data.jdbc.domain;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.Table;
 
-import java.util.List;
+import java.time.LocalDateTime;
 
 /**
  * @author renc
@@ -18,7 +18,11 @@ public class Actor {
 
     private String lastName;
 
+    private LocalDateTime birth;
+
     private Detail detail;
+
+    private Boolean active;
 
     public int getId() {
         return id;
@@ -44,6 +48,14 @@ public class Actor {
         this.lastName = lastName;
     }
 
+    public LocalDateTime getBirth() {
+        return birth;
+    }
+
+    public void setBirth(LocalDateTime birth) {
+        this.birth = birth;
+    }
+
     public Detail getDetail() {
         return detail;
     }
@@ -52,53 +64,12 @@ public class Actor {
         this.detail = detail;
     }
 
-    public static class Detail {
-        private Integer age;
-        private String sex;
-        private List<String> hobby;
-        private List<String> score;
+    public Boolean getActive() {
+        return active;
+    }
 
-        public Integer getAge() {
-            return age;
-        }
-
-        public void setAge(Integer age) {
-            this.age = age;
-        }
-
-        public String getSex() {
-            return sex;
-        }
-
-        public void setSex(String sex) {
-            this.sex = sex;
-        }
-
-        public List<String> getHobby() {
-            return hobby;
-        }
-
-        public void setHobby(List<String> hobby) {
-            this.hobby = hobby;
-        }
-
-        public List<String> getScore() {
-            return score;
-        }
-
-        public void setScore(List<String> score) {
-            this.score = score;
-        }
-
-        @Override
-        public String toString() {
-            return "Detail{" +
-                    "age=" + age +
-                    ", sex='" + sex + '\'' +
-                    ", hobby=" + hobby +
-                    ", score=" + score +
-                    '}';
-        }
+    public void setActive(Boolean active) {
+        this.active = active;
     }
 
     @Override

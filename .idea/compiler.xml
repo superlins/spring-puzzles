@@ -7,10 +7,42 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="camunda-external-task" />
-        <module name="springmvc-camunda" />
-        <module name="spring-gateway" />
+        <module name="spring-webflux" />
+        <module name="spring-keycloak" />
+        <module name="spring-axon" />
+        <module name="spring-nacos" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="camunda-external-task" target="1.8" />
+      <module name="sftp-client" target="8" />
+      <module name="sftp-controller" target="8" />
+      <module name="sftp-server" target="8" />
+      <module name="spring-actuator" target="8" />
+      <module name="spring-audit" target="8" />
+      <module name="spring-batch" target="8" />
+      <module name="spring-camunda" target="8" />
+      <module name="spring-data-es" target="8" />
+      <module name="spring-data-h2" target="8" />
+      <module name="spring-data-hbase" target="8" />
+      <module name="spring-data-jdbc" target="1.8" />
+      <module name="spring-data-jpa" target="8" />
+      <module name="spring-data-mongo" target="1.8" />
+      <module name="spring-data-r2dbc" target="8" />
+      <module name="spring-ddd" target="8" />
+      <module name="spring-ftp" target="8" />
+      <module name="spring-gateway" target="1.8" />
+      <module name="spring-jersey" target="8" />
+      <module name="spring-jooq" target="8" />
+      <module name="spring-mapstruct" target="8" />
+      <module name="spring-mvc" target="1.8" />
+      <module name="spring-mybatis" target="8" />
+      <module name="spring-quartz" target="8" />
+      <module name="spring-security" target="8" />
+      <module name="spring-sftp" target="8" />
+      <module name="spring-testcontainers" target="8" />
+      <module name="spring-websocket" target="8" />
+      <module name="springmvc-camunda" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-access="field">
+    <class name="org.example.ddd.domain.model.record.Record">
+
+        <id name="id" type="long" column="ID">
+            <generator class="identity"/>
+        </id>
+
+        <component name="recordId" unique="true" update="false">
+            <property name="id" type="string" column="_ID"/>
+        </component>
+
+        <property name="content" type="string" column="CONTENT" not-null="true"/>
+
+        <property name="sender" type="string" column="SENDER" not-null="true"/>
+
+        <property name="receiver" type="string" column="RECEIVER" not-null="true"/>
+
+        <property name="timestamp" type="long" column="TIMESTAMP" not-null="true"/>
+
+        <property name="labels" type="string" column="LABELS"/>
+    </class>
+</hibernate-mapping>

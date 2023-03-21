@@ -1,11 +1,13 @@
 package org.example.data.jdbc;
 
 import org.example.data.jdbc.domain.Actor;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
 import org.springframework.boot.test.autoconfigure.jdbc.JdbcTest;
 import org.springframework.jdbc.core.BatchPreparedStatementSetter;
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.jdbc.support.KeyHolder;
@@ -30,6 +32,17 @@ class ActorJdbcTemplateTest {
 
     @Autowired
     private JdbcTemplate jdbcTemplate;
+
+    @BeforeEach
+    void init() {
+        this.jdbcTemplate.execute("CREATE TABLE IF NOT EXISTS `t_actor` (" +
+                "  `id` int NOT NULL AUTO_INCREMENT," +
+                "  `first_name` varchar(64) NULL," +
+                "  `last_name` varchar(64) NULL," +
+                "  `detail` json NULL," +
+                "   PRIMARY KEY (`id`)" +
+                ");");
+    }
 
     @Test
     void test_count_queryForObject() {
@@ -76,6 +89,13 @@ class ActorJdbcTemplateTest {
     }
 
     @Test
+    void test_bean_queryForObject() {
+        List<Actor> actors = this.jdbcTemplate.query("select * from t_actor", new BeanPropertyRowMapper<>(Actor.class));
+        assertNotNull(actors);
+        assertTrue(actors.size() > 0);
+    }
+
+    @Test
     void test_insert() {
         int update = this.jdbcTemplate.update("insert into t_actor (first_name, last_name) values (?, ?)",
                 "Leonor", "Watling");
@@ -89,7 +109,7 @@ class ActorJdbcTemplateTest {
 
         KeyHolder keyHolder = new GeneratedKeyHolder();
         jdbcTemplate.update(connection -> {
-            PreparedStatement ps = connection.prepareStatement(INSERT_SQL, new String[] { "id" });
+            PreparedStatement ps = connection.prepareStatement(INSERT_SQL, new String[]{"id"});
             ps.setString(1, name);
             return ps;
         }, keyHolder);
@@ -147,7 +167,7 @@ class ActorJdbcTemplateTest {
 
         List<Object[]> batch = new ArrayList<Object[]>();
         for (Actor actor : actors) {
-            Object[] values = new Object[] {actor.getFirstName(), actor.getLastName(), actor.getId()};
+            Object[] values = new Object[]{actor.getFirstName(), actor.getLastName(), actor.getId()};
             batch.add(values);
         }
         this.jdbcTemplate.batchUpdate("update t_actor set first_name = ?, last_name = ? where id = ?", batch);
